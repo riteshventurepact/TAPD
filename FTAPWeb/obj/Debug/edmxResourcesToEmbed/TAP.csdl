@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TAPDModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TAPDEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="CollaborationImages" EntityType="TAPDModel.CollaborationImage" />
+    <EntitySet Name="Companies" EntityType="TAPDModel.Company" />
+    <EntitySet Name="JobTypes" EntityType="TAPDModel.JobType" />
+    <EntitySet Name="Locations" EntityType="TAPDModel.Location" />
+    <EntitySet Name="Opportunities" EntityType="TAPDModel.Opportunity" />
+    <EntitySet Name="OppportunityQuestions" EntityType="TAPDModel.OppportunityQuestion" />
+    <EntitySet Name="Students" EntityType="TAPDModel.Student" />
+    <EntitySet Name="UserRolls" EntityType="TAPDModel.UserRoll" />
+    <EntitySet Name="Users" EntityType="TAPDModel.User" />
+    <EntitySet Name="sysdiagrams" EntityType="TAPDModel.sysdiagram" />
+    <AssociationSet Name="FK_Companies_Locations" Association="TAPDModel.FK_Companies_Locations">
+      <End Role="Location" EntitySet="Locations" />
+      <End Role="Company" EntitySet="Companies" />
+    </AssociationSet>
+    <EntitySet Name="CompanyMailContacts" EntityType="TAPDModel.CompanyMailContact" />
+    <EntitySet Name="UploadRequirments" EntityType="TAPDModel.UploadRequirment" />
+    <EntitySet Name="Collaborations" EntityType="TAPDModel.Collaboration" />
+    <EntitySet Name="Interests" EntityType="TAPDModel.Interest" />
+    <AssociationSet Name="FK_CollaborationImages_Collaborations" Association="TAPDModel.FK_CollaborationImages_Collaborations">
+      <End Role="Collaboration" EntitySet="Collaborations" />
+      <End Role="CollaborationImage" EntitySet="CollaborationImages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Companies_Interests" Association="TAPDModel.FK_Companies_Interests">
+      <End Role="Interest" EntitySet="Interests" />
+      <End Role="Company" EntitySet="Companies" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CollaborationImage">
+    <Key>
+      <PropertyRef Name="CollaborationImageId" />
+    </Key>
+    <Property Name="CollaborationImageId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CollaborationId" Type="Int32" />
+    <Property Name="ImageNumber" Type="Int32" />
+    <Property Name="ImagePath" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="UpdatedOn" Type="DateTime" Nullable="false" p1:StoreGeneratedPattern="Computed" Precision="3" />
+    <Property Type="Int32" Name="EntryBy" />
+    <NavigationProperty Name="Collaboration" Relationship="TAPDModel.FK_CollaborationImages_Collaborations" FromRole="CollaborationImage" ToRole="Collaboration" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="CompanyDescription" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="CompanyPicture" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="IndustryId" Type="Int32" />
+    <Property Name="LocationId" Type="Int32" />
+    <Property Name="Founded" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="CompanyUrl" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Location" Relationship="TAPDModel.FK_Companies_Locations" FromRole="Company" ToRole="Location" />
+    <Property Type="String" Name="PrimaryAdminEmail" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PrimaryAdminRole" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SecondaryAdminEmail" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SecondaryAdminRole" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ThirdAdminEmail" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ThirdAdminRole" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Interest" Relationship="TAPDModel.FK_Companies_Interests" FromRole="Company" ToRole="Interest" />
+  </EntityType>
+  <EntityType Name="JobType">
+    <Key>
+      <PropertyRef Name="JobTypeId" />
+    </Key>
+    <Property Name="JobTypeId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TypeDescription" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="LocationId" />
+    </Key>
+    <Property Name="LocationId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Location1" Type="String" MaxLength="102" Unicode="false" FixedLength="false" p1:StoreGeneratedPattern="Computed" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="Companies" Relationship="TAPDModel.FK_Companies_Locations" FromRole="Location" ToRole="Company" />
+  </EntityType>
+  <EntityType Name="Opportunity">
+    <Key>
+      <PropertyRef Name="OpportunityId" />
+    </Key>
+    <Property Name="OpportunityId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Position" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Partners" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="JobTypeId" Type="Int32" />
+    <Property Name="LocationId" Type="Int32" />
+    <Property Name="InterestIds" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="UploadRequirementIds" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="PostedOn" Type="DateTime" Precision="3" />
+    <Property Name="AvailableTill" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="OppportunityQuestion">
+    <Key>
+      <PropertyRef Name="OpportunityQuestionId" />
+    </Key>
+    <Property Name="OpportunityQuestionId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="OpportunityQuestion" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="EntryBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentDetailId" />
+    </Key>
+    <Property Name="StudentDetailId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ProfilePicture" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="LocationId" Type="Int32" />
+    <Property Name="Education" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Language" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UserRoll">
+    <Key>
+      <PropertyRef Name="RollId" />
+    </Key>
+    <Property Name="RollId" Type="Int32" Nullable="false" />
+    <Property Name="RollName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="RollDescription" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="EmailId" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DOB" Type="DateTime" Precision="0" />
+    <Property Name="CompanyId" Type="Int32" />
+    <Property Name="RollId" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="UpdatedOn" Type="DateTime" Nullable="false" p1:StoreGeneratedPattern="Computed" Precision="3" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Companies_Locations">
+    <End Type="TAPDModel.Location" Role="Location" Multiplicity="0..1" />
+    <End Type="TAPDModel.Company" Role="Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Location">
+        <PropertyRef Name="LocationId" />
+      </Principal>
+      <Dependent Role="Company">
+        <PropertyRef Name="LocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CompanyMailContact">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Type="Int32" Name="ContactId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CompanyId" />
+    <Property Type="String" Name="FirstName" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsDeleted" />
+  </EntityType>
+  <EntityType Name="UploadRequirment">
+    <Key>
+      <PropertyRef Name="UploadRequirementId" />
+    </Key>
+    <Property Type="Int32" Name="UploadRequirementId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RequirementName" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="EntryBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="3" />
+  </EntityType>
+  <EntityType Name="Collaboration">
+    <Key>
+      <PropertyRef Name="CollaborationId" />
+    </Key>
+    <Property Type="Int32" Name="CollaborationId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CompanyId" />
+    <Property Type="String" Name="Question" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="InterestIds" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Partners" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="Int32" Name="EntryBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="3" />
+    <NavigationProperty Name="CollaborationImages" Relationship="TAPDModel.FK_CollaborationImages_Collaborations" FromRole="Collaboration" ToRole="CollaborationImage" />
+  </EntityType>
+  <EntityType Name="Interest">
+    <Key>
+      <PropertyRef Name="InterestId" />
+    </Key>
+    <Property Type="Int32" Name="InterestId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="InterestName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="InterestDescription" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="InterestPicture" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="DateTime" Name="LastUpdatedOn" Precision="3" />
+    <NavigationProperty Name="Companies" Relationship="TAPDModel.FK_Companies_Interests" FromRole="Interest" ToRole="Company" />
+  </EntityType>
+  <Association Name="FK_CollaborationImages_Collaborations">
+    <End Type="TAPDModel.Collaboration" Role="Collaboration" Multiplicity="0..1" />
+    <End Type="TAPDModel.CollaborationImage" Role="CollaborationImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Collaboration">
+        <PropertyRef Name="CollaborationId" />
+      </Principal>
+      <Dependent Role="CollaborationImage">
+        <PropertyRef Name="CollaborationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Companies_Interests">
+    <End Type="TAPDModel.Interest" Role="Interest" Multiplicity="0..1" />
+    <End Type="TAPDModel.Company" Role="Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Interest">
+        <PropertyRef Name="InterestId" />
+      </Principal>
+      <Dependent Role="Company">
+        <PropertyRef Name="IndustryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

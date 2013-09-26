@@ -1,0 +1,54 @@
+﻿@model FTAPWeb.Interest
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Interest</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InterestName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InterestName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InterestDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InterestDescription)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InterestPicutre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InterestPicutre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsActive)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsActive)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastUpdatedOn)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastUpdatedOn)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
