@@ -26,12 +26,12 @@ function login()
             if (response.authResponse) {
                 FB.api('/me', function (response) {
                     //alert('Your name is ' + response.name);
-                    alert(response.first_name);
-                    alert(response.email);
-                    alert(response.gender);
+                    //alert(response.first_name);
+                    //alert(response.email);
+                    //alert(response.gender);
                     //alert(response.user_education_history);
                     //alert(response.user_about_me);
-                    alert(response.last_name);
+                   // alert(response.last_name);
                     //jQuery('#txtFirstName').val(response.first_name);
                     //jQuery('#txtLastName').val(response.last_name);
                     //jQuery('#txtEmail').val(response.email);
@@ -42,7 +42,7 @@ function login()
                 });
 
             } else {
-               // alert('access not given');
+                    // alert('access not given');......
             }
 
         }, { 'scope': 'email' });
