@@ -42,7 +42,7 @@ function login()
                 });
 
             } else {
-                alert('access not given');
+               // alert('access not given');
             }
 
         }, { 'scope': 'email' });
