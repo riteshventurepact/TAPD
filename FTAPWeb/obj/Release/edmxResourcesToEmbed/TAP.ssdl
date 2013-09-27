@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TAPDModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="TAPDModelStoreContainer">
+    <EntitySet Name="CollaborationImages" EntityType="TAPDModel.Store.CollaborationImages" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Collaborations" EntityType="TAPDModel.Store.Collaborations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Companies" EntityType="TAPDModel.Store.Companies" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CompanyMailContacts" EntityType="TAPDModel.Store.CompanyMailContacts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Interests" EntityType="TAPDModel.Store.Interests" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JobTypes" EntityType="TAPDModel.Store.JobTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Locations" EntityType="TAPDModel.Store.Locations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Opportunities" EntityType="TAPDModel.Store.Opportunities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OppportunityQuestions" EntityType="TAPDModel.Store.OppportunityQuestions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Students" EntityType="TAPDModel.Store.Students" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="TAPDModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UploadRequirments" EntityType="TAPDModel.Store.UploadRequirments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserRolls" EntityType="TAPDModel.Store.UserRolls" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="TAPDModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_CollaborationImages_Collaborations" Association="TAPDModel.Store.FK_CollaborationImages_Collaborations">
+      <End Role="Collaborations" EntitySet="Collaborations" />
+      <End Role="CollaborationImages" EntitySet="CollaborationImages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Companies_Interests" Association="TAPDModel.Store.FK_Companies_Interests">
+      <End Role="Interests" EntitySet="Interests" />
+      <End Role="Companies" EntitySet="Companies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Companies_Locations" Association="TAPDModel.Store.FK_Companies_Locations">
+      <End Role="Locations" EntitySet="Locations" />
+      <End Role="Companies" EntitySet="Companies" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CollaborationImages">
+    <Key>
+      <PropertyRef Name="CollaborationImageId" />
+    </Key>
+    <Property Name="CollaborationImageId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CollaborationId" Type="int" />
+    <Property Name="ImageNumber" Type="int" />
+    <Property Name="ImagePath" Type="varchar" MaxLength="500" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="EntryBy" Type="int" />
+  </EntityType>
+  <EntityType Name="Collaborations">
+    <Key>
+      <PropertyRef Name="CollaborationId" />
+    </Key>
+    <Property Name="CollaborationId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyId" Type="int" />
+    <Property Name="Question" Type="varchar" MaxLength="500" />
+    <Property Name="InterestIds" Type="varchar(max)" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Partners" Type="varchar" MaxLength="250" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="EntryBy" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Companies">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="250" />
+    <Property Name="CompanyDescription" Type="varchar" MaxLength="250" />
+    <Property Name="CompanyPicture" Type="varchar" MaxLength="250" />
+    <Property Name="IndustryId" Type="int" />
+    <Property Name="LocationId" Type="int" />
+    <Property Name="Founded" Type="varchar" MaxLength="250" />
+    <Property Name="CompanyUrl" Type="varchar" MaxLength="250" />
+    <Property Name="PrimaryAdminEmail" Type="varchar" MaxLength="250" />
+    <Property Name="PrimaryAdminRole" Type="varchar" MaxLength="150" />
+    <Property Name="SecondaryAdminEmail" Type="varchar" MaxLength="250" />
+    <Property Name="SecondaryAdminRole" Type="varchar" MaxLength="150" />
+    <Property Name="ThirdAdminEmail" Type="varchar" MaxLength="250" />
+    <Property Name="ThirdAdminRole" Type="varchar" MaxLength="150" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CompanyMailContacts">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyId" Type="int" />
+    <Property Name="FirstName" Type="varchar" MaxLength="250" />
+    <Property Name="LastName" Type="varchar" MaxLength="250" />
+    <Property Name="Email" Type="varchar" MaxLength="250" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="Interests">
+    <Key>
+      <PropertyRef Name="InterestId" />
+    </Key>
+    <Property Name="InterestId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="InterestName" Type="varchar" MaxLength="50" />
+    <Property Name="InterestDescription" Type="varchar" MaxLength="250" />
+    <Property Name="InterestPicture" Type="varchar" MaxLength="250" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="LastUpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="JobTypes">
+    <Key>
+      <PropertyRef Name="JobTypeId" />
+    </Key>
+    <Property Name="JobTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="varchar" MaxLength="50" />
+    <Property Name="TypeDescription" Type="varchar" MaxLength="250" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Locations">
+    <Key>
+      <PropertyRef Name="LocationId" />
+    </Key>
+    <Property Name="LocationId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Location" Type="varchar" MaxLength="102" StoreGeneratedPattern="Computed" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="Opportunities">
+    <Key>
+      <PropertyRef Name="OpportunityId" />
+    </Key>
+    <Property Name="OpportunityId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Position" Type="varchar" MaxLength="250" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Partners" Type="varchar" MaxLength="500" />
+    <Property Name="JobTypeId" Type="int" />
+    <Property Name="LocationId" Type="int" />
+    <Property Name="InterestIds" Type="varchar(max)" />
+    <Property Name="UploadRequirementIds" Type="varchar(max)" />
+    <Property Name="PostedOn" Type="datetime" />
+    <Property Name="AvailableTill" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OppportunityQuestions">
+    <Key>
+      <PropertyRef Name="OpportunityQuestionId" />
+    </Key>
+    <Property Name="OpportunityQuestionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OpportunityQuestion" Type="varchar" MaxLength="250" />
+    <Property Name="EntryBy" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="StudentDetailId" />
+    </Key>
+    <Property Name="StudentDetailId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="ProfilePicture" Type="varchar" MaxLength="250" />
+    <Property Name="LocationId" Type="int" />
+    <Property Name="Education" Type="varchar" MaxLength="250" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Language" Type="varchar" MaxLength="50" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="UploadRequirments">
+    <Key>
+      <PropertyRef Name="UploadRequirementId" />
+    </Key>
+    <Property Name="UploadRequirementId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RequirementName" Type="varchar" MaxLength="250" />
+    <Property Name="EntryBy" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserRolls">
+    <Key>
+      <PropertyRef Name="RollId" />
+    </Key>
+    <Property Name="RollId" Type="int" Nullable="false" />
+    <Property Name="RollName" Type="varchar" MaxLength="50" />
+    <Property Name="RollDescription" Type="varchar" MaxLength="250" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="UserType" Type="varchar" MaxLength="50" />
+    <Property Name="EmailId" Type="varchar" MaxLength="250" />
+    <Property Name="Password" Type="varchar" MaxLength="250" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="CompanyId" Type="int" />
+    <Property Name="RollId" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <Association Name="FK_CollaborationImages_Collaborations">
+    <End Role="Collaborations" Type="TAPDModel.Store.Collaborations" Multiplicity="0..1" />
+    <End Role="CollaborationImages" Type="TAPDModel.Store.CollaborationImages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Collaborations">
+        <PropertyRef Name="CollaborationId" />
+      </Principal>
+      <Dependent Role="CollaborationImages">
+        <PropertyRef Name="CollaborationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Companies_Interests">
+    <End Role="Interests" Type="TAPDModel.Store.Interests" Multiplicity="0..1" />
+    <End Role="Companies" Type="TAPDModel.Store.Companies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Interests">
+        <PropertyRef Name="InterestId" />
+      </Principal>
+      <Dependent Role="Companies">
+        <PropertyRef Name="IndustryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Companies_Locations">
+    <End Role="Locations" Type="TAPDModel.Store.Locations" Multiplicity="0..1" />
+    <End Role="Companies" Type="TAPDModel.Store.Companies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations">
+        <PropertyRef Name="LocationId" />
+      </Principal>
+      <Dependent Role="Companies">
+        <PropertyRef Name="LocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

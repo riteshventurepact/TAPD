@@ -1,0 +1,50 @@
+﻿@model FTAPWeb.Interest
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Interest</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InterestName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InterestName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InterestDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InterestDescription)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InterestPicutre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InterestPicutre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsActive)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsActive)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastUpdatedOn)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastUpdatedOn)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.InterestId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

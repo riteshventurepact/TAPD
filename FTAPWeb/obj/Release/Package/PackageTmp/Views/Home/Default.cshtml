@@ -1,0 +1,124 @@
+﻿@model FTAPWeb.User
+
+@{
+    ViewBag.Title = "TAPD";
+    Layout = "~/Views/Shared/_TAPDLayoutPage.cshtml";
+}
+<!--start of Interests-->
+<div class="interest_outr">
+    <div class="interest_heading">
+        <p>Interests</p>
+        <a href="interest.html">See all</a>
+    </div>
+    <ul id="flexiselDemo3">
+
+        @foreach (var interest in ViewBag.Interests)
+        {
+            <li>
+                <img src="@Url.Content(interest.InterestPicture)" /><p>@interest.InterestName</p>
+            </li>      
+        }
+    </ul>
+</div>
+<!--End of interests-->
+
+
+<!--Start of main content-->
+<div id="content">
+    <div class="content_main">
+        <div class="box1_outr">
+            <div class="content_box">
+                <div class="content_box_text">
+                    <h2>CREATE AFTER SCHOOL ACTIVITIES FOR YOUR COMMUNITY.</h2>
+                    <br />
+                    <br />
+                    <div class="text_section">
+                        <a href="#">Education </a>&nbsp; &nbsp; 
+                                    <a href="#">Read More </a>&nbsp; &nbsp; 
+                                    <a href="#">Share </a>
+                    </div>
+                </div>
+            </div>
+            <!--end of content_box-->
+            <div class="content_box_video">
+                <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none"
+                    poster="http://video-js.zencoder.com/oceans-clip.png" data-setup="{}">
+                    <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                    <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                    <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                    <track kind="captions" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+                </video>
+            </div>
+            <!--end of content_box_video-->
+        </div>
+        <div class="box2_outr">
+            <div class="content_box1">
+                <div class="content_box1_text">
+                    <div class="uparrow"></div>
+                    <h3>EDUCATION IS AN IMPRECISE PROCESS, A DANCE, AND A COLLABORATIVE EXPERIENCE.
+                    </h3>
+                    <div class="downarrow"></div>
+                </div>
+            </div>
+            <!--end of content_box1-->
+            <div class="content_box2">
+                <img src="~/Content/images/img1.jpg" />
+            </div>
+            <!--end of content_box2-->
+            <div class="content_box3">
+                <div class="content_box3_text">
+                    <h4>How can we spark imagination and creativity away from computers?<br />
+                        <div class="text_section">
+                            <a href="#">Education </a>&nbsp; &nbsp; 
+                                            <a href="#">Read More </a>&nbsp; &nbsp; 
+                                            <a href="#">Share </a>
+                        </div>
+                    </h4>
+                    <div class="img_arrow"></div>
+                </div>
+                <img src="~/Content/images/img2.jpg" />
+            </div>
+            <!--end of content_box3-->
+        </div>
+        <div class="box3_outr">
+            <div class="content_box4">
+                <img src="~/Content/images/img3.jpg" />
+            </div>
+            <!--end of content_box4-->
+            <div class="content_box5">
+                <div class="content_box5_text">
+                    <h4>See which companies have opportunities in teaching.<br />
+                        <div class="text_section">
+                            <a href="#">Education </a>&nbsp; &nbsp; 
+                                    <a href="#">Read More </a>&nbsp; &nbsp; 
+                                    <a href="#">Share </a>
+                        </div>
+                    </h4>
+                    <div class="img_arrow"></div>
+                </div>
+            </div>
+            <!--end of content_box5-->
+        </div>
+        <div class="box4_outr">
+            <!--end of content_box-->
+            <div class="content_box10">
+                <img src="~/Content/images/img5.jpg" />
+            </div>
+            <div class="content_box7">
+                <div class="content_box_text7">
+                    <h2>HOW CAN WE TEACH OUR STUDENTS TO GIVE BACK?</h2>
+                    <div class="text_section">
+                        <a href="#">Education </a>&nbsp; &nbsp; 
+                                        <a href="#">Read More </a>&nbsp; &nbsp; 
+                                        <a href="#">Share </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content_box10">
+                <img src="~/Content/images/img4.jpg" />
+            </div>
+            <!--end of content_box2-->
+        </div>
+    </div>
+</div>
+<!--End of main content-->

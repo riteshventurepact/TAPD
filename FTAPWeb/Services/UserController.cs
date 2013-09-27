@@ -12,6 +12,7 @@ using System.Web.Http;
 using System.Security.Cryptography;
 using System.Text;
 using FTAPWeb.Controllers;
+using System.Web.Configuration;
 
 
 namespace FTAPWeb.Services
@@ -112,7 +113,7 @@ namespace FTAPWeb.Services
                
                 string s = Utility.Encrypt(userid.ToString(),true);
                 //string x = Decrypt(s, true);
-                objMailParent.Body = "Dear " + firstname + " " + lastname + ",<br/><br/>Thanks for your registration in TAPD. In order to complete your registration please verify your email by clicking on the <a href=' http://localhost:4795/Home/AccountConfirmation/" + s + "'  >link</a><br/><br/>Thanks<br/>TAPD Team";
+                objMailParent.Body = "Dear " + firstname + " " + lastname + ",<br/><br/>Thanks for your registration in TAPD. In order to complete your registration please verify your email by clicking on the <a href=' "+WebConfigurationManager.AppSettings["WebsiteUrl"].ToString()+"/Home/AccountConfirmation/" + s + "'  >link</a><br/><br/>Thanks<br/>TAPD Team";
                 objMailParent.Priority = MailPriority.High;
                 smtp.Send(objMailParent);
                 objMailParent.Dispose();

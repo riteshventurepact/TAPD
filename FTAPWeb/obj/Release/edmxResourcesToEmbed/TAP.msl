@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TAPDModelStoreContainer" CdmEntityContainer="TAPDEntities">
+    <EntitySetMapping Name="CollaborationImages">
+      <EntityTypeMapping TypeName="TAPDModel.CollaborationImage">
+        <MappingFragment StoreEntitySet="CollaborationImages">
+          <ScalarProperty Name="EntryBy" ColumnName="EntryBy" />
+          <ScalarProperty Name="CollaborationImageId" ColumnName="CollaborationImageId" />
+          <ScalarProperty Name="CollaborationId" ColumnName="CollaborationId" />
+          <ScalarProperty Name="ImageNumber" ColumnName="ImageNumber" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="TAPDModel.Company">
+        <MappingFragment StoreEntitySet="Companies">
+          <ScalarProperty Name="ThirdAdminRole" ColumnName="ThirdAdminRole" />
+          <ScalarProperty Name="ThirdAdminEmail" ColumnName="ThirdAdminEmail" />
+          <ScalarProperty Name="SecondaryAdminRole" ColumnName="SecondaryAdminRole" />
+          <ScalarProperty Name="SecondaryAdminEmail" ColumnName="SecondaryAdminEmail" />
+          <ScalarProperty Name="PrimaryAdminRole" ColumnName="PrimaryAdminRole" />
+          <ScalarProperty Name="PrimaryAdminEmail" ColumnName="PrimaryAdminEmail" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyDescription" ColumnName="CompanyDescription" />
+          <ScalarProperty Name="CompanyPicture" ColumnName="CompanyPicture" />
+          <ScalarProperty Name="IndustryId" ColumnName="IndustryId" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="Founded" ColumnName="Founded" />
+          <ScalarProperty Name="CompanyUrl" ColumnName="CompanyUrl" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobTypes">
+      <EntityTypeMapping TypeName="TAPDModel.JobType">
+        <MappingFragment StoreEntitySet="JobTypes">
+          <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="TypeDescription" ColumnName="TypeDescription" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="TAPDModel.Location">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="Location1" ColumnName="Location" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Opportunities">
+      <EntityTypeMapping TypeName="TAPDModel.Opportunity">
+        <MappingFragment StoreEntitySet="Opportunities">
+          <ScalarProperty Name="OpportunityId" ColumnName="OpportunityId" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Partners" ColumnName="Partners" />
+          <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="InterestIds" ColumnName="InterestIds" />
+          <ScalarProperty Name="UploadRequirementIds" ColumnName="UploadRequirementIds" />
+          <ScalarProperty Name="PostedOn" ColumnName="PostedOn" />
+          <ScalarProperty Name="AvailableTill" ColumnName="AvailableTill" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OppportunityQuestions">
+      <EntityTypeMapping TypeName="TAPDModel.OppportunityQuestion">
+        <MappingFragment StoreEntitySet="OppportunityQuestions">
+          <ScalarProperty Name="OpportunityQuestionId" ColumnName="OpportunityQuestionId" />
+          <ScalarProperty Name="OpportunityQuestion" ColumnName="OpportunityQuestion" />
+          <ScalarProperty Name="EntryBy" ColumnName="EntryBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="TAPDModel.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="StudentDetailId" ColumnName="StudentDetailId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRolls">
+      <EntityTypeMapping TypeName="TAPDModel.UserRoll">
+        <MappingFragment StoreEntitySet="UserRolls">
+          <ScalarProperty Name="RollId" ColumnName="RollId" />
+          <ScalarProperty Name="RollName" ColumnName="RollName" />
+          <ScalarProperty Name="RollDescription" ColumnName="RollDescription" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="TAPDModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="RollId" ColumnName="RollId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TAPDModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyMailContacts">
+      <EntityTypeMapping TypeName="TAPDModel.CompanyMailContact">
+        <MappingFragment StoreEntitySet="CompanyMailContacts">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UploadRequirments">
+      <EntityTypeMapping TypeName="TAPDModel.UploadRequirment">
+        <MappingFragment StoreEntitySet="UploadRequirments">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="EntryBy" ColumnName="EntryBy" />
+          <ScalarProperty Name="RequirementName" ColumnName="RequirementName" />
+          <ScalarProperty Name="UploadRequirementId" ColumnName="UploadRequirementId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Collaborations">
+      <EntityTypeMapping TypeName="TAPDModel.Collaboration">
+        <MappingFragment StoreEntitySet="Collaborations">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="EntryBy" ColumnName="EntryBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Partners" ColumnName="Partners" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="InterestIds" ColumnName="InterestIds" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="CollaborationId" ColumnName="CollaborationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Interests">
+      <EntityTypeMapping TypeName="TAPDModel.Interest">
+        <MappingFragment StoreEntitySet="Interests">
+          <ScalarProperty Name="LastUpdatedOn" ColumnName="LastUpdatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="InterestPicture" ColumnName="InterestPicture" />
+          <ScalarProperty Name="InterestDescription" ColumnName="InterestDescription" />
+          <ScalarProperty Name="InterestName" ColumnName="InterestName" />
+          <ScalarProperty Name="InterestId" ColumnName="InterestId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

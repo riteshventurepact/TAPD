@@ -1,0 +1,1199 @@
+@charset "utf-8";
+/* CSS Document */
+/* 800*600 screens start {SAhil} */
+@media only screen and (min-width : 800px) and (max-width : 1023px)
+{	
+#header_main .head_left 
+{
+    padding-left: 10px;
+    width: 30%;
+}
+#header_main .head_mid
+{
+	width:39%;
+}
+#header_main .head_right
+{
+	width:20%;
+}
+
+#middle .content_box1
+{
+	min-height:256px;
+}
+#middle .content_box_text h2
+{
+	font-size:26px;
+	line-height:36px;
+}
+#middle .box2_outr .content_box1_text
+{
+	padding:49px 13px;
+}
+#middle .content_box1 h3 
+{
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 50px;
+}
+#middle .content_box1 .downarrow
+{
+	right:28%;
+}
+#middle .content_box3_text h4
+{
+	font-size: 18px;
+    line-height: 24px;
+}
+#middle .box2_outr .content_box3_text 
+{
+	padding:26px 13px; 
+}
+#middle .content_box5_text h4
+{
+	font-size: 18px;
+    line-height: 24px;
+}
+#middle .content_box5
+{
+	min-height:128px;
+}
+#middle .box4_outr .content_box6 
+{
+    padding: 63px 16px;
+    text-align: center;
+    width: 29.5%;
+}
+#middle .content_box7 
+{
+    float: left;
+    width: 33%;
+}
+#middle .box4_outr .content_box_text7 
+{
+    padding: 32px 25px;
+}
+#middle .content_box_text7 h2 
+{
+    font-size: 26px;
+    line-height: 36px;
+}
+#middle .content_box8
+{
+	width:33.5%;
+}
+/* 800*600 screens end {SAhil} */
+/*23changes start */
+#middle .interest_heading p
+{
+	padding-left:15px;
+}
+/*23changes end */
+}
+/* 768*1024 screens start {SAhil} */
+@media only screen and (min-width : 768px) and (max-width : 1023px)
+{
+#header_main .head_left 
+{
+    padding-left: 10px;
+    width: 30%;
+}
+#header_main .head_mid
+{
+	width:39%;
+}
+#header_main .head_right
+{
+	width:20%;
+}
+#middle .content_box1
+{
+	min-height:248px;
+}
+#middle .content_box_text h2
+{
+	font-size:26px;
+	line-height:29px;
+}
+#middle .content_box1_text
+{
+	padding:40px 13px;
+}
+#middle .content_box1 h3 
+{
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0 50px;
+}
+#middle .content_box1 .downarrow
+{
+	right:28%;
+}
+#middle .content_box3_text h4
+{
+	font-size: 18px;
+    line-height: 23px;
+}
+#middle .content_box3_text 
+{
+	padding:22px 13px; 
+}
+#middle .content_box5_text h4
+{
+	font-size: 18px;
+    line-height: 24px;
+}
+#middle .content_box5
+{
+	min-height:123px;
+}
+#middle .content_box6
+{
+	padding:55px 15px;
+	width:29.5%;
+	text-align:center;
+}
+#middle .content_box7 
+{
+    float: left;
+    width: 33%;
+}
+#middle .content_box_text7 
+{
+    padding: 24px 25px;
+}
+#middle .content_box_text7 h2 
+{
+    font-size: 26px;
+    line-height: 36px;
+}
+#middle .content_box8
+{
+	width:33.5%;
+}
+/*23changes start */
+#middle .interest_heading p
+{
+	padding-left:15px;
+}
+#header_main .dashboard_outr
+{
+	height:210px;
+}
+/*23changes end */
+}
+
+/* 768*1024 screens end {SAhil} */
+/* 600*800 screens end {SAhil} */
+@media only screen and (min-width : 600px) and (max-width : 767px)
+{
+#header_main .head_left 
+{
+    padding-left: 10px;
+    width: 31%;
+}
+#header_main .head_mid
+{
+	width:36%;
+}
+#header_main .head_right
+{
+	width:25%;
+}
+#header_main .wrapper-dropdown-2
+{
+	width:50%;
+}
+#middle .content_box1
+{
+	min-height:224px;
+}
+#middle .content_box_text h2
+{
+	font-size: 18px;
+    line-height: 35px;
+}
+#middle .content_box1_text
+{
+	padding: 43px 13px;
+}
+#middle .content_box1 h3 
+{
+    font-size: 12px;
+    line-height: 24px;
+    margin: 0 37px;
+}
+#middle .content_box1 .downarrow
+{
+	right:28%;
+}
+#middle .content_box3_text h4
+{
+	font-size: 14px;
+    line-height: 24px;
+}
+#middle .content_box3_text 
+{
+	padding:13px; 
+}
+#middle .content_box3_text .img_arrow
+{
+	left: -13%;
+    top: -65px;
+}
+#middle .content_box5_text h4
+{
+	font-size: 12px;
+    line-height: 18px;
+}
+#middle .text_section a
+{
+	font-size:10px;
+}
+#middle .content_box5
+{
+	min-height:97px;
+}
+#middle .content_box5_text
+{
+	padding: 19px 13px;
+}
+#middle .content_box5_text .img_arrow
+{
+	left: -6%;
+    top: 21%;
+}
+#middle .content_box6
+{
+	padding: 26px 11px;
+    text-align: center;
+    width: 29.6%;
+}
+
+#middle .content_box7 
+{
+    float: left;
+    width: 33%;
+}
+#middle .content_box_text7 
+{
+    padding: 22px 25px;
+}
+#middle .content_box_text7 h2 
+{
+    font-size: 16px;
+    line-height: 19px;
+}
+#middle .content_box8
+{
+	width:33.5%;
+}
+/*popup start 16sep {SAhil}*/
+.modalDialog > div 
+{
+    margin: 0 auto;
+    width: 53%;
+}
+.flat-form
+{
+	width:100%;
+	min-height:100px;
+}
+.tabs
+{
+	margin:0px;
+}
+.tabs a 
+{
+    font-size: 13px;
+    padding: 8px 20px;
+}
+.tabs li:last-child a 
+{
+    padding-left: 20px;
+    padding-right: 21px;
+	width:80%;
+}
+.signup_fb
+{
+	background: url("../images/fb_btn.png") no-repeat scroll center center / contain #282727;
+    height:33px;
+    margin-left: 18px;
+    margin-top:0px;
+    transition: all 0.5s linear 0s;
+    width: 88%;
+}
+.signup_fb:hover
+{
+	background: url("../images/fb_btn.png") no-repeat scroll center center / contain #666666;
+    height:33px;
+}
+
+.form-action p 
+{
+    float: left;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 12px;
+    margin-bottom: 7px;
+    margin-left: 18px;
+    margin-top: 0;
+    overflow: hidden;
+    width: 88%;
+}
+ol, ul
+{
+    margin-top: 0;
+    padding-left: 20px;
+    padding-top: 0;
+    width: 86%;
+}
+
+.form input[type="text"], .form input[type="password"] 
+{
+    font-size: 10px;
+    height: 25px;
+	margin-bottom:7px;
+}
+.gray_text 
+{
+    color: #999999;
+    float: left;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 16px;
+    text-align: left;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    width: 100%;
+}
+.button 
+{
+    font-size: 14px;
+    height: 30px;
+    width: 100%;
+	margin-top:5px;
+}
+.button:hover 
+{
+    background: none repeat scroll 0 0 #F53C41;
+    transition: all 0.5s linear 0s;
+}
+.show 
+{
+    padding-bottom: 72px;
+}
+.tabs1
+{
+	margin:0px;
+}
+.tabs1 a 
+{
+    font-size: 13px;
+    padding: 8px 19px;
+}
+.tabs1 li:last-child a 
+{
+    padding-left: 20px;
+    padding-right: 21px;
+	width:80%;
+}
+.popupfied 
+{
+    width: 80%;
+}
+.show2
+{
+	padding-bottom:50px;
+}
+/*popup end 16sep {SAhil}*/
+/*23changes start */
+#middle .interest_heading p
+{
+	padding-left:15px;
+}
+#header_main .dashboard_outr
+{
+	height:186px;
+}
+/*23changes end */
+}
+/* 600*800 screens end {SAhil} */
+/* 568*320 screens start {SAhil} */
+@media only screen and (min-width : 568px) and (max-width : 599px)
+{
+#header_main .wrapper-dropdown-2 .dropdown
+{
+	top:96%;
+}
+#header_main .wrapper-dropdown-2
+{
+	padding: 13px 7px;
+	
+}
+#header_main .wrapper-dropdown-2 .dropdown li a
+{
+	padding:6px;
+	font-size:10px;
+}
+#middle .content_box1_text 
+{
+    padding: 35px 6px 6px;
+}
+#middle .content_box1 
+{
+    min-height: 184px;
+}
+#middle .content_box1 .downarrow 
+{
+    right: 0;
+}
+#middle .content_box3_text h4 
+{
+    font-size: 12px;
+    line-height: 20px;
+}
+}
+/* 480*320 screens start {SAhil} */
+@media only screen and (min-width : 480px) and (max-width : 599px)
+{
+#header_main .head_left 
+{
+    padding-left: 10px;
+    width: 75%;
+	float:right;
+}
+#header_main .head_mid
+{
+	width:45%;
+}
+
+#header_main .head_right 
+{
+    float: right;
+    width: 24%;
+}
+#header_main .joinus a
+{
+	width:55px;
+}
+#header_main .search
+{
+	font-size: 10px;
+    width: 100%;
+}
+#middle .content_box1
+{
+	min-height:154px;
+}
+#middle .content_box_text h2
+{
+	font-size: 18px;
+    line-height: 28px;
+}
+#middle .content_box1_text
+{
+	padding:6px;
+}
+#middle .content_box1 .uparrow
+{
+	left:-5px;
+}
+#middle .content_box1 h3 
+{
+    font-size: 10px;
+    line-height: 19px;
+    margin: 0 5px;
+}
+#middle .content_box1 .uparrow
+{
+	left:-5px;
+}
+#middle .content_box1 .downarrow
+{
+	right:28%;
+}
+#middle .content_box3_text h4
+{
+	font-size: 12px;
+    line-height: 12px;
+}
+#middle .content_box3_text 
+{
+	padding:7px; 
+}
+#middle .content_box3_text .img_arrow
+{
+	left: -11%;
+    top: -50%;
+}
+#middle .content_box5_text h4
+{
+	font-size: 12px;
+    line-height: 16px;
+}
+#middle .content_box5_text .img_arrow 
+{
+    left: -6%;
+    top: 18%;
+}
+#middle .text_section a
+{
+	font-size:10px;
+}
+#middle .content_box5
+{
+	min-height:77px;
+}
+#middle .content_box5_text
+{
+	padding: 6px;
+}
+#middle .content_box6
+{
+	padding: 7px 10px;
+    text-align: center;
+    width: 29%;
+}
+
+#middle .content_box7 
+{
+    float: left;
+    width: 33%;
+}
+#middle .content_box_text7 
+{
+    padding: 10px 20px 0;
+}
+#middle .content_box_text7 h2 
+{
+    font-size: 14px;
+    line-height: 16px;
+}
+#middle .content_box8
+{
+	width:33.6%;
+}
+/*popup start 16sep {SAhil}*/
+.modalDialog > div 
+{
+    margin: 0 auto;
+    width: 57%;
+}
+.flat-form
+{
+	width:100%;
+	min-height:100px;
+}
+.tabs
+{
+	margin:0px;
+}
+.tabs a 
+{
+    font-size: 13px;
+    padding: 8px 20px;
+}
+.tabs li:last-child a 
+{
+    padding-left: 20px;
+    padding-right: 21px;
+	width:80%;
+}
+.signup_fb
+{
+	background: url("../images/fb_btn.png") no-repeat scroll center center / contain #282727;
+    height:33px;
+    margin-left: 18px;
+    margin-top:0px;
+    transition: all 0.5s linear 0s;
+    width: 88%;
+}
+.signup_fb:hover
+{
+	background: url("../images/fb_btn.png") no-repeat scroll center center / contain #666666;
+    height:33px;
+}
+
+.form-action p 
+{
+    float: left;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 12px;
+    margin-bottom: 7px;
+    margin-left: 18px;
+    margin-top: 0;
+    overflow: hidden;
+    width: 88%;
+}
+ol, ul
+{
+    margin-top: 0;
+    padding-left: 20px;
+    padding-top: 0;
+    width: 86%;
+}
+
+.form input[type="text"], .form input[type="password"] 
+{
+    font-size: 10px;
+    height: 25px;
+	margin-bottom:7px;
+}
+.gray_text 
+{
+    color: #999999;
+    float: left;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 16px;
+    text-align: left;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    width: 100%;
+}
+.button 
+{
+    font-size: 14px;
+    height: 30px;
+    width: 100%;
+	margin-top:5px;
+}
+.button:hover 
+{
+    background: none repeat scroll 0 0 #F53C41;
+    transition: all 0.5s linear 0s;
+}
+.show 
+{
+    padding-bottom: 72px;
+}
+.tabs1
+{
+	margin:0px;
+}
+.tabs1 a 
+{
+    font-size: 13px;
+    padding: 8px 20px;
+}
+.tabs1 li:last-child a 
+{
+    padding-left: 20px;
+    padding-right: 21px;
+	width:80%;
+}
+.popupfied 
+{
+    width: 80%;
+}
+.show2
+{
+	padding-bottom:50px;
+}
+/*popup end 16sep {SAhil}*/
+/*23changes start */
+#middle .interest_heading p
+{
+	padding-left:15px;
+}
+/*23changes end */
+}
+/* 480*320 screens start {SAhil} */
+/* 380*685 android galaxy screens start {SAhil} */
+@media only screen and (min-width : 380px) and (max-width : 479px)
+{
+#middle .content_box3_text .img_arrow 
+{
+	left: -12%;
+	top: -61%;
+}
+#middle .content_box3_text 
+{
+    padding: 10px 7px 11px;
+}
+#middle .content_box3_text .text_section a 
+{
+    font-size: 10px;
+}
+#middle .content_box3_text h4 
+{
+    font-size: 13px;
+    line-height: 23px;
+}
+#main_page #middle .content_box6 
+{
+    padding: 18px 10px;
+    text-align: center;
+    width: 44%;
+}
+/*popup start 16sep {SAhil}*/
+.modalDialog > div 
+{
+    margin: 0 auto;
+    width: 83%;
+}
+.flat-form
+{
+	width:100%;
+	min-height:100px;
+}
+.tabs
+{
+	margin:0px;
+}
+.tabs a 
+{
+    font-size: 13px;
+    padding: 8px 20px;
+}
+.tabs li:last-child a 
+{
+    padding-left: 20px;
+    padding-right: 21px;
+	width:80%;
+}
+.signup_fb
+{
+	background: url("../images/fb_btn.png") no-repeat scroll center center / contain #282727;
+    height:33px;
+    margin-left: 18px;
+    margin-top:0px;
+    transition: all 0.5s linear 0s;
+    width: 88%;
+}
+.signup_fb:hover
+{
+	background: url("../images/fb_btn.png") no-repeat scroll center center / contain #666666;
+    height:33px;
+}
+
+.form-action p 
+{
+    float: left;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 12px;
+    margin-bottom: 7px;
+    margin-left: 18px;
+    margin-top: 0;
+    overflow: hidden;
+    width: 88%;
+}
+ol, ul
+{
+    margin-top: 0;
+    padding-left: 20px;
+    padding-top: 0;
+    width: 86%;
+}
+
+.form input[type="text"], .form input[type="password"] 
+{
+    font-size: 10px;
+    height: 25px;
+	margin-bottom:7px;
+}
+.gray_text 
+{
+    color: #999999;
+    float: left;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 16px;
+    text-align: left;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    width: 100%;
+}
+.button 
+{
+    font-size: 14px;
+    height: 30px;
+    width: 100%;
+	margin-top:5px;
+}
+.button:hover 
+{
+    background: none repeat scroll 0 0 #F53C41;
+    transition: all 0.5s linear 0s;
+}
+.show 
+{
+    padding-bottom: 72px;
+}
+.tabs1
+{
+	margin:0px;
+}
+.tabs1 a 
+{
+    font-size: 13px;
+    padding: 8px 20px;
+}
+.tabs1 li:last-child a 
+{
+    padding-left: 20px;
+    padding-right: 21px;
+	width:80%;
+}
+.popupfied 
+{
+    width: 80%;
+}
+.show2
+{
+	padding-bottom:50px;
+}
+/*popup end 16sep {SAhil}*/
+/*23changes start */
+#middle .interest_heading p
+{
+	padding-left:15px;
+}
+#middle .interest_outr 
+{
+    width: 99%;
+}
+#header_main .dashboard_outr
+{
+	height: 102px;
+    left: -206px;
+    top: 57px;
+    width: 363px;
+}
+#header_main .dashboard ul li a 
+{
+    font-size: 10px;
+    padding: 9px;
+    width: 88%;
+}
+/*23changes end */
+}
+/* 380*685 android galaxy screens end {SAhil} */
+/* 320*480 screens start {SAhil} */
+@media only screen and (min-width : 320px) and (max-width : 479px)
+{
+#header_main .head_left 
+{
+    float: right;
+    padding-right: 25px;
+    width: 75%;
+}
+#header_main .head_mid
+{
+	width:45%;
+}
+#header_main .head_right 
+{
+  	float: left;
+	left: 12%;
+	position: relative;
+	width: 43%;
+}
+#header_main .joinus
+{
+	margin:0px;
+}
+#header_main .joinus a
+{
+	width:55px;
+}
+#header_main .search
+{
+	font-size: 10px;
+    width: 100%;
+}
+#middle .content_box
+{
+	min-height:154px;
+	width:100%;
+}
+#middle .content_box_text 
+{
+    margin-left: 20px;
+    padding: 5px 25px;
+}
+#middle .content_box_video 
+{
+    float: left;
+    width: 100%;
+}
+#middle .content_box1
+{
+	min-height:154px;
+	width:100%;
+}
+#middle .content_box_text h2
+{
+	font-size: 18px;
+    line-height: 28px;
+	text-align:center;
+}
+#middle .content_box1_text
+{
+	padding:13px;
+	text-align:center;
+}
+#middle .content_box1 .uparrow
+{
+	left:-5px;
+}
+#middle .content_box1 h3 
+{
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0 5px;
+}
+#middle .content_box1 .uparrow
+{
+	left:-5px;
+}
+#middle .content_box1 .downarrow
+{
+	right:0%;
+}
+#middle .content_box2 
+{
+    float: left;
+    width:54%;
+}
+#middle .content_box3 
+{
+    width: 46%;
+}
+#middle .content_box3_text h4
+{
+	font-size: 11px;
+    line-height: 17px;
+}
+#middle .content_box3_text 
+{
+	padding: 9px 7px 11px;
+}
+
+#middle .content_box3_text .text_section a 
+{
+    font-size: 8px;
+}
+#middle .content_box3_text .img_arrow
+{
+	left: -13%;
+    top: -54%;
+}
+#middle .content_box5_text h4
+{
+	font-size: 12px;
+    line-height: 16px;
+}
+#middle .content_box5_text .img_arrow 
+{
+    left: 27%;
+    top: -36%;
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); /* IE 9 */
+	-webkit-transform:rotate(90deg); /* Safari and Chrome */
+}
+#middle .text_section a
+{
+	font-size:12px;
+}
+#middle .content_box4 
+{
+    float: left;
+    width: 100%;
+}
+#middle .content_box5
+{
+	min-height:50px;
+	width:100%;
+}
+#middle .content_box5_text
+{
+	padding: 7px;
+}
+#middle .content_box6
+{
+	padding: 3px 10px;
+    text-align: center;
+    width: 44%;
+}
+
+#middle .content_box7 
+{
+    float: left;
+    width: 100%;
+}
+#middle .content_box_text7 .text_section 
+{
+    text-align: center;
+    width: 100%;
+}
+#middle .content_box_text7 
+{
+    padding: 10px;
+}
+#middle .content_box_text7 h2 
+{
+    font-size: 12px;
+    line-height: 25px;
+    text-align: center;
+	margin-bottom:0px;
+}
+#middle .content_box8
+{
+	width:49%;
+}
+#middle .content_box10 
+{
+    width: 100%;
+}
+/*popup start 16sep {SAhil}*/
+.modalDialog > div 
+{
+    margin: 0 auto;
+    width: 87%;
+}
+.flat-form
+{
+	width:100%;
+	min-height:100px;
+}
+.tabs
+{
+	margin:0px;
+}
+.tabs a 
+{
+    font-size: 13px;
+    padding: 8px 10px;
+}
+.tabs li:last-child a 
+{
+    padding-left: 5px;
+    padding-right: 6px;
+    width: 100%;
+}
+.signup_fb
+{
+	background: url("../images/fb_btn.png") no-repeat scroll center center / contain #282727;
+    height:33px;
+    margin-left: 18px;
+    margin-top:0px;
+    transition: all 0.5s linear 0s;
+    width: 88%;
+}
+.signup_fb:hover
+{
+	background: url("../images/fb_btn.png") no-repeat scroll center center / contain #666666;
+    height:33px;
+}
+
+.form-action p 
+{
+    float: left;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 12px;
+    margin-bottom: 7px;
+    margin-left: 18px;
+    margin-top: 0;
+    overflow: hidden;
+    width: 88%;
+}
+ol, ul
+{
+    margin-top: 0;
+    padding-left: 20px;
+    padding-top: 0;
+    width: 86%;
+}
+
+.form input[type="text"], .form input[type="password"] 
+{
+    font-size: 10px;
+    height: 25px;
+	margin-bottom:7px;
+}
+.gray_text 
+{
+    color: #999999;
+    float: left;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 16px;
+    text-align: left;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    width: 100%;
+}
+.button 
+{
+    font-size: 14px;
+    height: 30px;
+    width: 100%;
+	margin-top:5px;
+}
+.button:hover 
+{
+    background: none repeat scroll 0 0 #F53C41;
+    transition: all 0.5s linear 0s;
+}
+.show 
+{
+    padding-bottom: 72px;
+}
+.tabs1
+{
+	margin:0px;
+}
+.tabs1 a 
+{
+    font-size: 12px;
+    padding: 8px 5px;
+}
+.tabs1 li:last-child a 
+{
+    padding-left: 5px;
+    padding-right: 6px;
+    width: 100%;
+}
+.popupfied 
+{
+    width: 80%;
+}
+.show2
+{
+	padding-bottom:50px;
+}
+/*popup end 16sep {SAhil}*/
+/*23changes start */
+#middle .interest_heading p
+{
+	padding-left:15px;
+}
+#middle .nbs-flexisel-inner
+{
+	width: 84%;
+}
+/*23changes end */
+}
+/* 320*480 screens start {SAhil} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

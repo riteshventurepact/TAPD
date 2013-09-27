@@ -1,0 +1,48 @@
+@font-face {
+	font-family: 'Conv_VAGRounded-Light';
+	src: url('../fonts/VAGRounded-Light.eot');
+	src: local('☺'), url('../fonts/VAGRounded-Light.woff') format('woff'), url('../fonts/VAGRounded-Light.ttf') format('truetype'), url('../fonts/VAGRounded-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* 800*600 screens start {SAhil} */
+@media only screen and (min-width : 800px) and (max-width : 1023px)
+{
+
+}
+/* 800*600 screens end {SAhil} */
+
+/* 768*1024 screens start {SAhil} */
+@media only screen and (min-width : 768px) and (max-width : 1023px)
+{
+/*signup start*/
+.flat-forms
+{
+	width:80%;
+}
+/*signup end*/
+}
+/* 768*1024 screens end {SAhil} */
+
+/* 600*800 screens start {SAhil} */
+@media only screen and (min-width : 600px) and (max-width : 767px)
+{
+/*signup start*/
+.flat-forms
+{
+	width:80%;
+}
+/*signup end*/
+}
+/* 600*800 screens end {SAhil} */
+
+
+
+
+
+
+
+
+
+

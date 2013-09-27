@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/designercss")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <!--Start of designer html-->
+    <div id="main_page">
+        <div id="header_main">
+            <div id="header_content">
+                <div class="head_left">
+                    <form id="form1" name="form1" method="post" action="">
+                        <section class="main">
+                            <div class="wrapper-demo">
+                                <div id="dd" class="wrapper-dropdown-2" tabindex="1">
+                                    <span id="selected">- Select -</span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Discover</a></li>
+                                        <li><a href="#">OPPORTUNITIES</a></li>
+                                        <li>@Html.ActionLink("INTERESTS", "Interest", "Home")</li>
+                                        <li>@Html.ActionLink("COMPANIES", "Companies", "Home")</li>
+                                        <li><a href="#">COLLABORATIONS</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        <a href="#search_boxoutr" class="search_icon fancybox"></a>
+                        <div id="search_boxoutr">
+                            <input type="text" />
+                            <p>Being typing to search</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="head_mid"><a href="index.html">
+                    <img src="~/Content/images/logo.jpg" width="127" height="47" /></a></div>
+                <div class="head_right">
+                    <!--start join us-->
+                    <span class='popbox'>
+                        <!--start login-->
+                        <a id="dashboard_outr_icon" href="javascript:void(0)">
+                            <img src="~/Content/images/joinus.png" /></a>
+                        <div id="login">
+                            <div>
+                                <div class="flat-form">
+                                    <ul class="tabs1">
+                                        <li>
+                                            <a href="#user-login" class="active2">&nbsp;&nbsp;User Log In&nbsp;</a>
+                                        </li>
+                                        <li>
+                                            <a href="#company-login">&nbsp;Company Log In&nbsp;</a>
+                                        </li>
+                                    </ul>
+                                    <div id="user-login" class="form-action show2">
+                                        <p></p>
+                                        <form class="form">
+                                            <ul class="popupfied">
+                                                <li>
+                                                    <input type="text" id="txtEmail" placeholder="EMAIL" />
+                                                </li>
+                                                <li>
+                                                    <input type="password" id="txtPassword" placeholder="PASSWORD" />
+                                                </li>
+
+                                                <div class="gray_text">
+                                                    <a class="fancybox" href="#forget_pass">Forgot Password?</a>
+                                                </div>
+                                                <div id="forget_pass" class="flat-form" style="display: none; min-height: 220px;">
+                                                    <p class="reset_heading">RESET</p>
+                                                    <ul>
+                                                        <li>
+                                                            <input class="reset_form" type="text" placeholder="ENTER YOUR EMAIL ADDRESS" /></li>
+                                                        <li>
+                                                            <input type="submit" value="SUBMIT" class="button" /></li>
+                                                    </ul>
+                                                </div>
+                                                <li>
+                                                    <input type="submit" value="LOGIN" class="button" />
+                                                </li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                    <div id="company-login" class="form-action hide2">
+                                        <p></p>
+                                        <form class="form">
+                                            <ul class="popupfied">
+                                                <li>
+                                                    <input type="text" id="txtCEmail" placeholder="EMAIL" />
+                                                </li>
+                                                <li>
+                                                    <input type="password" id="txtCPassword" placeholder="PASSWORD" />
+                                                </li>
+
+                                                <div class="gray_text">
+                                                    <a class="fancybox" href="#forget_pass">Forgot Password?</a>
+                                                    <div id="forget_pass" style="display: none;">
+                                                        <h3>RESET</h3>
+                                                    </div>
+                                                </div>
+
+                                                <li>
+                                                    <input type="submit" value="LOGIN" class="button" />
+                                                </li>
+
+                                            </ul>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--end of start login-->
+                    </span>
+                    <p class="joinus"><a class="fancybox" href="#signup">Join us</a></p>
+                    <div id="signup">
+                        <div>
+                            <div class="flat-form">
+                                <ul class="tabs">
+                                    <li>
+                                        <a href="#user-signup" class="active">User Sign Up</a>
+                                    </li>
+                                    <li>
+                                        <a href="#company-signup">Company Sign Up</a>
+                                    </li>
+                                </ul>
+                                <div id="user-signup" class="form-action show">
+                                    <div onclick="login()" class="signup_fb"><a href="javascript:void(0);"></a></div>
+                                    <p>......................................................................</p>
+                                    <form class="form" name="UserSignUpForm">
+                                        <ul>
+                                            <li>
+                                                <input type="text" name="User_Name" id="User_Name" placeholder="EMAIL" />
+                                            </li>
+                                            <li>
+                                                <input type="password" name="User_Password" id="User_Password" placeholder="PASSWORD" />
+                                            </li>
+                                            <li>
+                                                <input type="password" name="User_ConfirmPassword" id="User_ConfirmPassword" placeholder="RETYPE PASSWORD" />
+                                            </li>
+                                            <div class="gray_text">
+                                                <input name="" type="checkbox" value="">
+                                                &nbsp;I have read and agree to the <a href="#">Terms &amp; Conditions.</a>
+                                            </div>
+
+                                            <li>
+                                                <input type="button" value="SIGN UP" class="button" onclick="ValidationForUserSignUp()" />
+                                            </li>
+                                            <div class="gray_text"><a class="fancybox" href="#login">Already a TAPD member?</a></div>
+                                        </ul>
+                                    </form>
+                                </div>
+
+                                <div id="company-signup" class="form-action hide">
+                                    <p></p>
+                                    <form class="form">
+                                        <ul>
+                                            <li>
+                                                <input type="text" placeholder="COMPANY NAME" />
+                                            </li>
+                                            <li>
+                                                <input type="text" placeholder="FIRST NAME" />
+                                            </li>
+                                            <li>
+                                                <input type="text" placeholder="LAST NAME" />
+                                            </li>
+                                            <li>
+                                                <input type="text" placeholder="EMAIL (Needs to be a company email)" />
+                                            </li>
+                                            <li>
+                                                <input type="text" placeholder="PHONE NUMBER" />
+                                            </li>
+                                            <li>
+                                                <input type="password" placeholder="PASSWORD" />
+                                            </li>
+                                            <li>
+                                                <input type="password" placeholder="RETYPE PASSWORD" />
+                                            </li>
+                                            <div class="gray_text">
+                                                <input name="" type="checkbox" value="">
+                                                &nbsp;I have read and agree to the <a href="#">Terms &amp; Conditions.</a>
+                                            </div>
+
+                                            <li>
+                                                <input type="submit" value="SIGN UP" class="button" />
+                                            </li>
+                                            <div class="gray_text"><a class="fancybox" href="#login">Already a TAPD member?</a></div>
+                                        </ul>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of start join us-->
+                    <div id="dashboard_outr" class="dashboard_outr">
+                        <div class="dashboard">
+                            <ul>
+                                <li><a href="javascript:void(0)">Dashboard</a></li>
+                                <li><a href="#login" class="fancybox">Log In</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+                <div class="header_arrow"></div>
+            </div>
+            <!--end of header_content-->
+        </div>
+        <!--end of header_main-->
+        <div id="middle">
+            <div id="mid_inner">
+                <!--start of slider-wrapper-->
+                <div class="callbacks_container">
+                    <ul class="rslides" id="slider4">
+                        <li>
+                            <img src="~/Content/images/slider1.jpg" alt="">
+                            <!--<p class="caption">This is a caption</p>-->
+                        </li>
+                        <li>
+                            <img src="~/Content/images/slider2.jpg" alt="">
+                            <!--<p class="caption">This is another caption</p>-->
+                        </li>
+                        <li>
+                            <img src="~/Content/images/slider3.jpg" alt="">
+                            <!--<p class="caption">The third caption</p>-->
+                        </li>
+                    </ul>
+                </div>
+                <!--end of slider-wrapper-->
+                <div id="content">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end of main_page-->
+
+    <!--End of designer html-->
+     
+   @Scripts.Render("~/bundles/jquery")
+   @RenderSection("scripts", required: false)
+   @Scripts.Render("~/Scripts/designerjs")
+</body>
+</html>

@@ -251,4 +251,3 @@ E:\Ritessh\Pratham\TAPD\FTAP\FTAP\FTAPWeb\bin\zh-Hans\System.Spatial.resources.d
 E:\Ritessh\Pratham\TAPD\FTAP\FTAP\FTAPWeb\bin\zh-Hant\System.Spatial.resources.dll
 E:\Ritessh\Pratham\TAPD\FTAP\FTAP\FTAPWeb\obj\Debug\FTAPWeb.dll
 E:\Ritessh\Pratham\TAPD\FTAP\FTAP\FTAPWeb\obj\Debug\FTAPWeb.pdb
-E:\Ritessh\Pratham\TAPD\FTAP\FTAP\FTAPWeb\obj\Debug\FTAPWeb.csprojResolveAssemblyReference.cache

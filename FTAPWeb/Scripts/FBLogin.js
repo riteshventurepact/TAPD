@@ -1,4 +1,13 @@
-﻿function login()
+﻿// Load the SDK asynchronously
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) { return; }
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+function login()
 {
    // alert('hi');
     window.fbAsyncInit = function () {
@@ -39,6 +48,7 @@
         }, { 'scope': 'email' });
 
 
+        //For Facebook User Creation
         function createUser(e, p, f, l,g, ut) {
             $.ajax({
                 data: "{'UserName':'" + e + "','UserType':'" + ut + "','EmailId':'" + e + "','Password':'" + p + "','FirstName':'" + f + "','LastName':'" + l+"','Gender':'"+g+ "'}",
@@ -56,32 +66,28 @@
 
     };
 
-    // Load the SDK asynchronously
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) { return; }
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    function SaveUser(usrname, usertype, usrPass) {
-            $.ajax({
-                data: "{'UserType':'" + usertype + "','EmailId':'" + usrname + "','Password':'" + usrPass + "'}",
-                type: "POST",
-                dataType: "json",
-                contentType: "application/json;charset=utf-8",
-                url: "/api/User",
-                success: function (data) {
-                    //alert(data.UserId);
-                    alert('User created successfully, Please check your email to confirm your registration.', false);
-                },
-                error: function (a, b, c) { alert("Error: " + a); }
-            });
-        }
 
-    }
+}
 
-function ValidationForUserSignUp() {
+//For Normal(Student) User Creation
+function SaveUser(usrname, usertype, usrPass) {
+    alert('Calling Save User');
+    $.ajax({
+        data: "{'UserType':'" + usertype + "','EmailId':'" + usrname + "','Password':'" + usrPass + "'}",
+        type: "POST",
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        url: "/api/User",
+        success: function (data) {
+            //alert(data.UserId);
+            alert('User created successfully, Please check your email to confirm your registration.', false);
+        },
+        error: function (a, b, c) { alert("Error: " + a); }
+    });
+}
+
+function ValidationForUserSignUp()
+{
     var val='';
     var showerrmsg = true;
     var msg = '';
@@ -153,5 +159,5 @@ function ValidationForUserSignUp() {
     }
     //---------------------------------------------------
 
-    SaveUser(x, 'U', y);
+    SaveUser($("#User_Name").val(), 'U', $("#User_Password").val());
 }
