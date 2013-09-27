@@ -26,7 +26,7 @@ function login()
             if (response.authResponse) {
                 FB.api('/me', function (response) {
                     //alert('Your name is ' + response.name);
-                    //alert(response.first_name);
+                  
                     //alert(response.email);
                     //alert(response.gender);
                     //alert(response.user_education_history);
