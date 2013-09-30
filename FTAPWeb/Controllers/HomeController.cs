@@ -29,8 +29,15 @@ namespace FTAPWeb.Controllers
 
         public ActionResult Default()
         {
-            ViewBag.Interests = db.Interests.ToList();
-            return View();
+            try
+            {
+                ViewBag.Interests = db.Interests.ToList();
+                return View();
+            }
+            catch (Exception ex)
+            {
+                return View();
+            }
         }
 
         public ActionResult Interest()

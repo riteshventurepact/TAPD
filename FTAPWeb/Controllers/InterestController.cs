@@ -17,6 +17,7 @@ namespace FTAPWeb.Controllers
 
         public ActionResult Index()
         {
+
             return View(db.Interests.ToList());
         }
 

@@ -6,8 +6,12 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Mail;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Http;
+using FTAPWeb.Controllers;
+using FTAPWeb.Models;
 
 namespace FTAPWeb.Services
 {
@@ -62,20 +66,48 @@ namespace FTAPWeb.Services
         }
 
         // POST api/Company
-        public HttpResponseMessage PostCompany(Company company)
+        [HttpPost]
+        [ActionName("CreateCompany")]
+        public String PostCompany(CompanyUser company)
         {
             if (ModelState.IsValid)
             {
-                db.Companies.Add(company);
-                db.SaveChanges();
+                var existinguser = (from p in db.Users where p.EmailId == company.Email select p).SingleOrDefault();
+                if (existinguser == null)
+                {
+                    string msg = "";
+                    int? result = db.pCreateCompanyUser(company.CompanyName, company.FirstName, company.LastName, company.Email, company.Phone, company.Password).First();
+                    if (result > 0)
+                    {
+                        msg = "Thanks for registration.";
+                        Utility.SendRegisterationEmail(int.Parse(result.ToString()), company.Email, company.FirstName, company.LastName);
+                    }
+                    else if (result == -2)
+                    {
+                        msg = "Company Already Exists.";
+                    }
+                    else if (result == -1)
+                    {
+                        msg = "Sorry! There was a problem.";
+                    }
 
-                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, company);
-                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = company.CompanyId }));
-                return response;
+                    return msg;
+                }
+                else
+                {
+                    return "User already exists.";
+                }
+                //db.Companies.Add(company);
+                //db.SaveChanges();
+
+                //HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, company);
+                //response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = company.CompanyId }));
+                //return response;
             }
             else
             {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                //return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                return "Error";
             }
         }
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+//using MvcCodeRouting;
 
 namespace FTAPWeb
 {
@@ -12,6 +13,14 @@ namespace FTAPWeb
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            //routes.MapCodeRoutes(
+            //          rootController: typeof(Controllers.HomeController),
+            //          settings: new CodeRoutingSettings
+            //          {
+            //              UseImplicitIdToken = true
+            //          }
+            //      );
 
             routes.MapRoute(
                 name: "Default",

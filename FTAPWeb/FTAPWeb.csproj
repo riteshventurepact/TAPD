@@ -40,6 +40,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MvcCodeRouting">
+      <HintPath>..\packages\MvcCodeRouting.1.1.0\lib\net40\MvcCodeRouting.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -201,6 +204,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InterestController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
+    <Compile Include="Controllers\MenuExtensions.cs" />
     <Compile Include="Controllers\Utility.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -216,16 +220,26 @@
       <DependentUpon>TAP.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\CompanyUser.cs" />
     <Compile Include="Opportunity.cs">
       <DependentUpon>TAP.tt</DependentUpon>
     </Compile>
     <Compile Include="OppportunityQuestion.cs">
       <DependentUpon>TAP.tt</DependentUpon>
     </Compile>
+    <Compile Include="pCreateCompanyUser_Result.cs">
+      <DependentUpon>TAP.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CompanyController.cs" />
     <Compile Include="Services\InterestsController.cs" />
     <Compile Include="Services\UserController.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>TAP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>TAP.tt</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs">
       <DependentUpon>TAP.tt</DependentUpon>
     </Compile>
@@ -377,6 +391,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fb.html" />
     <Content Include="Global.asax" />
     <Content Include="Content\fonts\FRABK.eot" />
     <Content Include="Content\fonts\FRABK.otf" />
@@ -390,8 +405,24 @@
     <Content Include="Content\fonts\VAGRounded-Light.otf" />
     <Content Include="Content\fonts\VAGRounded-Light.ttf" />
     <Content Include="Content\fonts\VAGRounded-Light.woff" />
+    <Content Include="fonts\FRABK.eot" />
+    <Content Include="fonts\FRABK.otf" />
+    <Content Include="fonts\FRABK.svg" />
+    <Content Include="fonts\FRABK.ttf" />
+    <Content Include="fonts\FRABK.woff" />
+    <Content Include="fonts\GothamMedium.eot" />
+    <Content Include="fonts\GothamMedium.otf" />
+    <Content Include="fonts\GothamMedium.svg" />
+    <Content Include="fonts\GothamMedium.ttf" />
+    <Content Include="fonts\GothamMedium.woff" />
+    <Content Include="fonts\VAGRounded-Light.eot" />
+    <Content Include="fonts\VAGRounded-Light.otf" />
+    <Content Include="fonts\VAGRounded-Light.svg" />
+    <Content Include="fonts\VAGRounded-Light.ttf" />
+    <Content Include="fonts\VAGRounded-Light.woff" />
     <None Include="Properties\PublishProfiles\tapd.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\blockUI.js" />
     <Content Include="Scripts\FBLogin.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -411,6 +442,7 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\myvalidations.js" />
     <Content Include="Scripts\responsiveslides.js" />
     <Content Include="Scripts\tapdlayout.js" />
     <Content Include="Web.config" />

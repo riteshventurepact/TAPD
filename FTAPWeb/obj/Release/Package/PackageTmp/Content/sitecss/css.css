@@ -36,6 +36,14 @@
 /*signup end*/
 }
 /* 600*800 screens end {SAhil} */
+ .Edit
+{
+    background: url("../images/logo.jpg") no-repeat;
+    display: inline-block;
+    height: 37px;
+    width: 125px;
+    vertical-align: middle;
+    }
 
 
 

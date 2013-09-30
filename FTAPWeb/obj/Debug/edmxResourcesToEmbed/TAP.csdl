@@ -27,6 +27,14 @@
       <End Role="Interest" EntitySet="Interests" />
       <End Role="Company" EntitySet="Companies" />
     </AssociationSet>
+    <FunctionImport Name="pCreateCompanyUser" ReturnType="Collection(Int32)">
+      <Parameter Name="CompanyName" Mode="In" Type="String" />
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Phone" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="CollaborationImage">
     <Key>
@@ -148,6 +156,7 @@
     <Property Name="RollId" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" />
     <Property Name="UpdatedOn" Type="DateTime" Nullable="false" p1:StoreGeneratedPattern="Computed" Precision="3" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
@@ -242,4 +251,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="pCreateCompanyUser_Result">
+    <Property Type="Int32" Name="Column1" Nullable="false" />
+  </ComplexType>
 </Schema>

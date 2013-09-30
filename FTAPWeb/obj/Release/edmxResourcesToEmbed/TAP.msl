@@ -111,6 +111,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="TAPDModel.User">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="UserType" ColumnName="UserType" />
@@ -187,5 +188,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="pCreateCompanyUser" FunctionName="TAPDModel.Store.pCreateCompanyUser" />
   </EntityContainerMapping>
 </Mapping>

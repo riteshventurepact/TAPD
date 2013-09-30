@@ -39,6 +39,9 @@ namespace FTAPWeb
                      "~/Scripts/jquery.flexisel.js",
                      "~/Scripts/jquery.fancybox.pack.js",
                      "~/Scripts/tapdlayout.js",
+                     "~/Scripts/blockUI.js",
+                     "~/Scripts/jquery.validate.js",
+                     "~/Scripts/myvalidations.js",
                      "~/Scripts/FBLogin.js"
                 ));
 

@@ -1,0 +1,6 @@
+﻿1>------ Build started: Project: FTAPWeb, Configuration: Debug Any CPU ------
+1>R:\TAPD\FTAPWeb\Controllers\HomeController.cs(37,30,37,32): warning CS0168: The variable 'ex' is declared but never used
+1>R:\TAPD\FTAPWeb\Controllers\Utility.cs(99,30,99,32): warning CS0168: The variable 'ex' is declared but never used
+1>R:\TAPD\FTAPWeb\Controllers\Utility.cs(133,30,133,32): warning CS0168: The variable 'ex' is declared but never used
+1>  FTAPWeb -> R:\TAPD\FTAPWeb\bin\FTAPWeb.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

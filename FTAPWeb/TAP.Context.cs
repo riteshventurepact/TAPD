@@ -12,6 +12,9 @@ namespace FTAPWeb
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Objects;
+    using System.Data.Objects.DataClasses;
+    using System.Linq;
     
     public partial class TAPDEntities : DbContext
     {
@@ -39,5 +42,34 @@ namespace FTAPWeb
         public DbSet<UploadRequirment> UploadRequirments { get; set; }
         public DbSet<Collaboration> Collaborations { get; set; }
         public DbSet<Interest> Interests { get; set; }
+    
+        public virtual ObjectResult<Nullable<int>> pCreateCompanyUser(string companyName, string firstName, string lastName, string email, string phone, string password)
+        {
+            var companyNameParameter = companyName != null ?
+                new ObjectParameter("CompanyName", companyName) :
+                new ObjectParameter("CompanyName", typeof(string));
+    
+            var firstNameParameter = firstName != null ?
+                new ObjectParameter("FirstName", firstName) :
+                new ObjectParameter("FirstName", typeof(string));
+    
+            var lastNameParameter = lastName != null ?
+                new ObjectParameter("LastName", lastName) :
+                new ObjectParameter("LastName", typeof(string));
+    
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+    
+            var phoneParameter = phone != null ?
+                new ObjectParameter("Phone", phone) :
+                new ObjectParameter("Phone", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("pCreateCompanyUser", companyNameParameter, firstNameParameter, lastNameParameter, emailParameter, phoneParameter, passwordParameter);
+        }
     }
 }

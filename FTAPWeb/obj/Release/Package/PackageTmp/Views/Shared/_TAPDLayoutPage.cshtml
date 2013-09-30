@@ -5,6 +5,7 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/designercss")
     @Scripts.Render("~/bundles/modernizr")
+    @using FTAPWeb.Controllers
 </head>
 <body>
     <!--Start of designer html-->
@@ -16,12 +17,19 @@
                         <section class="main">
                             <div class="wrapper-demo">
                                 <div id="dd" class="wrapper-dropdown-2" tabindex="1">
-                                    <span id="selected">- Select -</span>
+                                   @{ 
+                                       var actionName = ViewContext.Controller.ValueProvider.GetValue("action").RawValue.ToString();
+                                       if (actionName.ToString() == "Default")
+                                       {
+                                           actionName = "-- Select --";
+                                       }
+                                   }
+                                    <span id="selected">@actionName</span>
                                     <ul class="dropdown">
                                         <li><a href="#">Discover</a></li>
                                         <li><a href="#">OPPORTUNITIES</a></li>
-                                        <li>@Html.ActionLink("INTERESTS", "Interest", "Home")</li>
-                                        <li>@Html.ActionLink("COMPANIES", "Companies", "Home")</li>
+                                        <li>@Html.MenuItem("INTERESTS", "Interest", "Home")</li>
+                                        <li>@Html.MenuItem("COMPANIES", "Companies", "Home")</li>
                                         <li><a href="#">COLLABORATIONS</a></li>
                                     </ul>
                                 </div>
@@ -34,8 +42,10 @@
                         </div>
                     </form>
                 </div>
-                <div class="head_mid"><a href="index.html">
-                    <img src="~/Content/images/logo.jpg" width="127" height="47" /></a></div>
+                <div class="head_mid">@*<a> href="index.html">
+                    <img src="~/Content/images/logo.jpg" width="127" height="47" /></a>*@
+                    @Html.ActionLink(" ", "Default", "Home", null, new { @class = "Edit" })
+                </div>
                 <div class="head_right">
                     <!--start join us-->
                     <span class='popbox'>
@@ -55,13 +65,13 @@
                                     </ul>
                                     <div id="user-login" class="form-action show2">
                                         <p></p>
-                                        <form class="form">
+                                        <form class="form" name="UserLoginForm" id="UserLoginForm">
                                             <ul class="popupfied">
                                                 <li>
-                                                    <input type="text" id="txtEmail" placeholder="EMAIL" />
+                                                    <input type="text" id="uemail" name="uemail" placeholder="EMAIL" />
                                                 </li>
                                                 <li>
-                                                    <input type="password" id="txtPassword" placeholder="PASSWORD" />
+                                                    <input type="password" id="upassword" name="upassword" placeholder="PASSWORD" />
                                                 </li>
 
                                                 <div class="gray_text">
@@ -71,26 +81,27 @@
                                                     <p class="reset_heading">RESET</p>
                                                     <ul>
                                                         <li>
-                                                            <input class="reset_form" type="text" placeholder="ENTER YOUR EMAIL ADDRESS" /></li>
+                                                            <input class="reset_form" type="text" id="txtresetpwd" name="txtresetpwd" placeholder="ENTER YOUR EMAIL ADDRESS" /></li>
                                                         <li>
-                                                            <input type="submit" value="SUBMIT" class="button" /></li>
+                                                            <input type="button" onclick="forgotpwd()" value="SUBMIT" class="button" />
+                                                        </li>
                                                     </ul>
                                                 </div>
                                                 <li>
-                                                    <input type="submit" value="LOGIN" class="button" />
+                                                    <input type="button" id="userlogin" name="userlogin" value="LOGIN" class="button" />
                                                 </li>
                                             </ul>
                                         </form>
                                     </div>
                                     <div id="company-login" class="form-action hide2">
                                         <p></p>
-                                        <form class="form">
+                                        <form class="form" name="CompanyLoginForm" id="CompanyLoginForm">
                                             <ul class="popupfied">
                                                 <li>
-                                                    <input type="text" id="txtCEmail" placeholder="EMAIL" />
+                                                    <input type="text" id="cmemail" name="cmemail" placeholder="EMAIL" />
                                                 </li>
                                                 <li>
-                                                    <input type="password" id="txtCPassword" placeholder="PASSWORD" />
+                                                    <input type="password" id="cmpassword" name="cmpassword" placeholder="PASSWORD" />
                                                 </li>
 
                                                 <div class="gray_text">
@@ -101,7 +112,7 @@
                                                 </div>
 
                                                 <li>
-                                                    <input type="submit" value="LOGIN" class="button" />
+                                                    <input type="button" name="companylogin" id="companylogin" value="LOGIN" class="button" />
                                                 </li>
 
                                             </ul>
@@ -123,29 +134,30 @@
                                     </li>
                                     <li>
                                         <a href="#company-signup">Company Sign Up</a>
-                                    </li>
+                                    </li> 
                                 </ul>
                                 <div id="user-signup" class="form-action show">
                                     <div onclick="login()" class="signup_fb"><a href="javascript:void(0);"></a></div>
+                                    <div id="fb-root"></div>
                                     <p>......................................................................</p>
-                                    <form class="form" name="UserSignUpForm">
+                                    <form class="form" id="UserSignUpForm" name="UserSignUpForm">
                                         <ul>
                                             <li>
-                                                <input type="text" name="User_Name" id="User_Name" placeholder="EMAIL" />
+                                                <input type="text" name="username" id="username" placeholder="EMAIL" />
                                             </li>
                                             <li>
-                                                <input type="password" name="User_Password" id="User_Password" placeholder="PASSWORD" />
+                                                <input type="password" name="password" id="password" placeholder="PASSWORD" />
                                             </li>
                                             <li>
-                                                <input type="password" name="User_ConfirmPassword" id="User_ConfirmPassword" placeholder="RETYPE PASSWORD" />
+                                                <input type="password" name="confirmpassword" id="confirmpassword" placeholder="RETYPE PASSWORD" />
                                             </li>
                                             <div class="gray_text">
-                                                <input name="" type="checkbox" value="">
+                                                <input type="checkbox" value="" id="agree" name="agree">
                                                 &nbsp;I have read and agree to the <a href="#">Terms &amp; Conditions.</a>
                                             </div>
 
                                             <li>
-                                                <input type="button" value="SIGN UP" class="button" onclick="ValidationForUserSignUp()" />
+                                                <input type="button" id="usersignup" name="usersignup" value="SIGN UP" class="button" />
                                             </li>
                                             <div class="gray_text"><a class="fancybox" href="#login">Already a TAPD member?</a></div>
                                         </ul>
@@ -154,40 +166,41 @@
 
                                 <div id="company-signup" class="form-action hide">
                                     <p></p>
-                                    <form class="form">
+                                    <form class="form" name="CompanySignupForm" id="CompanySignupForm">
                                         <ul>
                                             <li>
-                                                <input type="text" placeholder="COMPANY NAME" />
+                                                <input type="text" placeholder="COMPANY NAME" name="companyname" id="companyname" />
                                             </li>
                                             <li>
-                                                <input type="text" placeholder="FIRST NAME" />
+                                                <input type="text" placeholder="FIRST NAME" name="firstname" id="firstname" />
                                             </li>
                                             <li>
-                                                <input type="text" placeholder="LAST NAME" />
+                                                <input type="text" placeholder="LAST NAME" name="lastname" id="lastname" />
                                             </li>
                                             <li>
-                                                <input type="text" placeholder="EMAIL (Needs to be a company email)" />
+                                                <input type="text" placeholder="EMAIL (Needs to be a company email)" id="email" name="email" />
                                             </li>
                                             <li>
-                                                <input type="text" placeholder="PHONE NUMBER" />
+                                                <input type="text" placeholder="PHONE NUMBER" id="phone" name="phone" />
                                             </li>
                                             <li>
-                                                <input type="password" placeholder="PASSWORD" />
+                                                <input type="password" placeholder="PASSWORD"  id="cpassword" name="cpassword"/>
                                             </li>
                                             <li>
-                                                <input type="password" placeholder="RETYPE PASSWORD" />
+                                                <input type="password" placeholder="CONFIRM PASSWORD" id="cconfirmpassword" name="cconfirmpassword" />
                                             </li>
                                             <div class="gray_text">
-                                                <input name="" type="checkbox" value="">
+                                                <input name="agree" type="checkbox" value="" id="agree">
                                                 &nbsp;I have read and agree to the <a href="#">Terms &amp; Conditions.</a>
                                             </div>
 
                                             <li>
-                                                <input type="submit" value="SIGN UP" class="button" />
+                                                <input type="button" value="SIGN UP" name="companysignup" id="companysignup" class="button"/>
                                             </li>
                                             <div class="gray_text"><a class="fancybox" href="#login">Already a TAPD member?</a></div>
                                         </ul>
                                     </form>
+
                                 </div>
 
                             </div>

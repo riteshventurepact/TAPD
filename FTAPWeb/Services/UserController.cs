@@ -66,8 +66,36 @@ namespace FTAPWeb.Services
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
+        // POST api/User/ValidateUser
+        [HttpPost]
+        [ActionName("ValidateUser")]
+        public String ValidateUser([FromBody] User user)
+        {
+            var existinguser = (from p in db.Users where p.EmailId == user.EmailId && p.Password==user.Password && p.UserType==user.UserType select p).SingleOrDefault();
+            if (existinguser == null)
+            {
+                return "Invalid username or password";
+            }
+            else
+            {
+                return existinguser.UserId.ToString();
+            }
+        }
+
+        //POST api/User/ForgotPassword
+        [HttpPost]
+        [ActionName("ForgotPassword")]
+        public String ForgotPassword([FromBody] User user)
+        {
+            Utility.SendForgotPasswordEmail(user.EmailId);
+            return "Please check your email to reset your password";
+        }
+
+
         // POST api/User
-        public HttpResponseMessage PostUser(User user)
+        [HttpPost]
+        [ActionName("CreateUser")]
+        public String PostUser([FromBody] User user)
         {
             if (ModelState!=null?ModelState.IsValid:true)
             {
@@ -76,54 +104,21 @@ namespace FTAPWeb.Services
                 {
                     db.Users.Add(user);
                     db.SaveChanges();
-
-                    SendEmail(user.UserId, user.EmailId, user.FirstName, user.LastName);
-
-                    HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, user);
-                    response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = user.UserId }));
-                    return response;
+                    return "User created successfully, Please check your email to confirm your registration.";
                 }
                 else
                 {
-                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                    return "User Already Exists.";
                 }
             }
             else
             {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                return "Oops! Something Went Wrong.";
             }
         }
-        public string SendEmail(int userid,string email,string firstname,string lastname)
-        {
-            try
-            {
-                SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp.gmail.com";
-                smtp.Port = 587;
 
-                smtp.Timeout = 600000;
-                smtp.Credentials = new System.Net.NetworkCredential("tapdventurepact@gmail.com", "venturepact");
-                smtp.EnableSsl = true;
 
-                MailMessage objMailParent = new MailMessage();
-                objMailParent.IsBodyHtml = true;
-                objMailParent.To.Add(email);
-                objMailParent.From = new MailAddress("tapdventurepact@gmail.com", "TAPD");
-                objMailParent.Subject = "Welcome To TAPD";
-               
-                string s = Utility.Encrypt(userid.ToString(),true);
-                //string x = Decrypt(s, true);
-                objMailParent.Body = "Dear " + firstname + " " + lastname + ",<br/><br/>Thanks for your registration in TAPD. In order to complete your registration please verify your email by clicking on the <a href=' "+WebConfigurationManager.AppSettings["WebsiteUrl"].ToString()+"/Home/AccountConfirmation/" + s + "'  >link</a><br/><br/>Thanks<br/>TAPD Team";
-                objMailParent.Priority = MailPriority.High;
-                smtp.Send(objMailParent);
-                objMailParent.Dispose();
-                return "sent";
-            }
-            catch (Exception ex)
-            {
-                return "error";
-            }
-        }
+        
 
         // DELETE api/User/5
         public HttpResponseMessage DeleteUser(int id)

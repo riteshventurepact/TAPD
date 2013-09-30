@@ -8,15 +8,20 @@
 <div class="interest_outr">
     <div class="interest_heading">
         <p>Interests</p>
-        @Html.ActionLink("See all", "Index", "Interest")
+        @Html.ActionLink("See all", "Interest", "Home")
     </div>
     <ul id="flexiselDemo3">
 
-        @foreach (var interest in ViewBag.Interests)
+        @{
+        if(ViewBag.Interests!=null)
+        {
+        foreach (var interest in ViewBag.Interests)
         {
             <li>
                 <img src="@Url.Content(interest.InterestPicture)" /><p>@interest.InterestName</p>
             </li>      
+        }
+        }
         }
     </ul>
 </div>

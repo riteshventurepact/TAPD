@@ -27,5 +27,6 @@ namespace FTAPWeb
         public Nullable<int> RollId { get; set; }
         public Nullable<bool> IsActive { get; set; }
         public System.DateTime UpdatedOn { get; set; }
+        public string Phone { get; set; }
     }
 }

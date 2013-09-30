@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
+using System.Web.Configuration;
 
 namespace FTAPWeb.Controllers
 {
@@ -67,5 +69,79 @@ namespace FTAPWeb.Controllers
                 throw ex;
             }
         }
+
+        public static string SendRegisterationEmail(int userid, string email, string firstname, string lastname)
+        {
+            try
+            {
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.gmail.com";
+                smtp.Port = 587;
+
+                smtp.Timeout = 600000;
+                smtp.Credentials = new System.Net.NetworkCredential("tapdventurepact@gmail.com", "venturepact");
+                smtp.EnableSsl = true;
+
+                MailMessage objMailParent = new MailMessage();
+                objMailParent.IsBodyHtml = true;
+                objMailParent.To.Add(email);
+                objMailParent.From = new MailAddress("tapdventurepact@gmail.com", "TAPD");
+                objMailParent.Subject = "Welcome To TAPD";
+
+                string s = Utility.Encrypt(userid.ToString(), true);
+                //string x = Decrypt(s, true);
+                objMailParent.Body = "Dear " + firstname + " " + lastname + ",<br/><br/>Thanks for your registration in TAPD. In order to complete your registration please verify your email by clicking on the <a href=' " + WebConfigurationManager.AppSettings["WebsiteUrl"].ToString() + "/Home/AccountConfirmation/" + s + "'  >link</a><br/><br/>Thanks<br/>TAPD Team";
+                objMailParent.Priority = MailPriority.High;
+                smtp.Send(objMailParent);
+                objMailParent.Dispose();
+                return "sent";
+            }
+            catch (Exception ex)
+            {
+                return "error";
+            }
+        }
+
+        public static string SendForgotPasswordEmail(string email)
+        {
+            TAPDEntities db = new TAPDEntities();
+            var user = (from p in db.Users where p.EmailId == email select p).FirstOrDefault();
+            if (user != null)
+            {
+                try
+                {
+                    SmtpClient smtp = new SmtpClient();
+                    smtp.Host = "smtp.gmail.com";
+                    smtp.Port = 587;
+
+                    smtp.Timeout = 600000;
+                    smtp.Credentials = new System.Net.NetworkCredential("tapdventurepact@gmail.com", "venturepact");
+                    smtp.EnableSsl = true;
+
+                    MailMessage objMailParent = new MailMessage();
+                    objMailParent.IsBodyHtml = true;
+                    objMailParent.To.Add(email);
+                    objMailParent.From = new MailAddress("tapdventurepact@gmail.com", "TAPD");
+                    objMailParent.Subject = "TAPD Forgot Password";
+
+                    string s = Utility.Encrypt(user.UserId.ToString(), true);
+                    //string x = Decrypt(s, true);
+                    objMailParent.Body = "Dear " + user.FirstName + " " + user.LastName + ",<br/><br/>To reset your password please click on the <a href=' " + WebConfigurationManager.AppSettings["WebsiteUrl"].ToString() + "/Home/ForgotPassword/" + s + "'  >link</a><br/><br/>Thanks<br/>TAPD Team";
+                    objMailParent.Priority = MailPriority.High;
+                    smtp.Send(objMailParent);
+                    objMailParent.Dispose();
+                    return "sent";
+                }
+                catch (Exception ex)
+                {
+                    return "error";
+                }
+            }
+            else
+            {
+                return "This email doesn't exists in TAPD user list.";
+            }
+        }
+
     }
 }
