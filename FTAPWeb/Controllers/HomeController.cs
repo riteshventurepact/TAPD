@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FTAPWeb.Models;
 
 namespace FTAPWeb.Controllers
 {
@@ -40,7 +41,48 @@ namespace FTAPWeb.Controllers
             }
         }
 
+        public ActionResult ForgotPassword(string id)
+        {
+            try
+            {
+                string urlid = Utility.Decrypt(id, true);
+                UserForgotPassword user = (from p in db.UserForgotPasswords where p.PasswordActivationCode == urlid select p).SingleOrDefault();
+                return View();
+            }
+            catch (Exception ex)
+            {
+                return View();
+            }
+        }
+
+        public ActionResult ForgotPassword(UserForgotPassword user)
+        {
+            try
+            {
+                User student = (from p in db.Users where p.UserId == user.UserId && p.Password==user.OldPassword select p).SingleOrDefault();
+                if (student != null)
+                {
+                    student.Password = user.NewPassword;
+                    user.ClickedDateTime = DateTime.Now;
+                    user.WasPasswordChanged = true;
+                    user.UserClicked = true;
+                    db.SaveChanges();
+                }
+                return View();
+            }
+            catch (Exception ex)
+            {
+                return View();
+            }
+        }
+
         public ActionResult Interest()
+        {
+            ViewBag.Interests = db.Interests.ToList();
+            return View();
+        }
+
+        public ActionResult Interests()
         {
             ViewBag.Interests = db.Interests.ToList();
             return View();

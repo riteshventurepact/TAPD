@@ -12,14 +12,27 @@
     </div>
     <div class="interest_inner">
         <div class="interest_list">
-            @foreach (var company in ViewBag.Companies)
-            {
+            @{
+                if (ViewBag.Companies != null)
+                {
+                    foreach (var company in ViewBag.Companies)
+                    {
                 <div class="interest_list_inner">
                     <a href="javascript:void(0);">
-                        <img src="@Url.Content(company.CompanyPicture)" /></a>
+                        @if (company.CompanyPicture != null)
+                        {
+                            <img src='@Url.Content(company.CompanyPicture == null ? "" : company.CompanyPicture)' />
+                        }
+                        else
+                        {
+                         <img src='~/images/no-logo.jpg' />   
+                        }
+                    </a>
                     <h4>@company.CompanyName</h4>
                     <p>20 Opportunities</p>
                 </div>
+                    }
+                }
             }
         </div>
     </div>

@@ -44,6 +44,16 @@ namespace FTAPWeb.Controllers
             return View();
         }
 
+
+        public ActionResult CompanyDashboard(string CompanyIdEncrypted)
+        {
+            //string id = Utility.Decrypt(CompanyIdEncrypted,true);
+            Company company = db.Companies.Find(CompanyIdEncrypted);
+            //ViewBag.IndustryId = new SelectList(db.Interests, "InterestId", "InterestName");
+            //ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "Location1");
+            return View(company);
+        }
+
         //
         // POST: /Company/Create
 

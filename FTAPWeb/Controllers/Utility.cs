@@ -124,9 +124,20 @@ namespace FTAPWeb.Controllers
                     objMailParent.From = new MailAddress("tapdventurepact@gmail.com", "TAPD");
                     objMailParent.Subject = "TAPD Forgot Password";
 
-                    string s = Utility.Encrypt(user.UserId.ToString(), true);
+                    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                    var random = new Random();
+                    var result = new string(
+                        Enumerable.Repeat(chars, 8)
+                                  .Select(s => s[random.Next(s.Length)])
+                                  .ToArray());
+
+                    string ss = Utility.Encrypt(result, true);
                     //string x = Decrypt(s, true);
-                    objMailParent.Body = "Dear " + user.FirstName + " " + user.LastName + ",<br/><br/>To reset your password please click on the <a href=' " + WebConfigurationManager.AppSettings["WebsiteUrl"].ToString() + "/Home/ForgotPassword/" + s + "'  >link</a><br/><br/>Thanks<br/>TAPD Team";
+
+                    //Insert a new entry in ForgotPasswordUser table
+
+
+                    objMailParent.Body = "Dear " + user.FirstName + " " + user.LastName + ",<br/><br/>To reset your password please click on the <a href=' " + WebConfigurationManager.AppSettings["WebsiteUrl"].ToString() + "/Home/ForgotPassword/" + ss + "'  >link</a><br/><br/>Thanks<br/>TAPD Team";
                     objMailParent.Priority = MailPriority.High;
                     smtp.Send(objMailParent);
                     objMailParent.Dispose();

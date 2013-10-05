@@ -189,5 +189,20 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="pCreateCompanyUser" FunctionName="TAPDModel.Store.pCreateCompanyUser" />
+    <EntitySetMapping Name="UserForgotPasswords">
+      <EntityTypeMapping TypeName="TAPDModel.UserForgotPassword">
+        <MappingFragment StoreEntitySet="UserForgotPassword">
+          <ScalarProperty Name="OldPassword" ColumnName="OldPassword" />
+          <ScalarProperty Name="NewPassword" ColumnName="NewPassword" />
+          <ScalarProperty Name="ClickedDateTime" ColumnName="ClickedDateTime" />
+          <ScalarProperty Name="WasPasswordChanged" ColumnName="WasPasswordChanged" />
+          <ScalarProperty Name="UserClicked" ColumnName="UserClicked" />
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+          <ScalarProperty Name="PasswordActivationCode" ColumnName="PasswordActivationCode" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ForgotPasswordId" ColumnName="ForgotPasswordId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

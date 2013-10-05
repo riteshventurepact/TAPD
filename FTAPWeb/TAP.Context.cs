@@ -42,6 +42,7 @@ namespace FTAPWeb
         public DbSet<UploadRequirment> UploadRequirments { get; set; }
         public DbSet<Collaboration> Collaborations { get; set; }
         public DbSet<Interest> Interests { get; set; }
+        public DbSet<UserForgotPassword> UserForgotPasswords { get; set; }
     
         public virtual ObjectResult<Nullable<int>> pCreateCompanyUser(string companyName, string firstName, string lastName, string email, string phone, string password)
         {

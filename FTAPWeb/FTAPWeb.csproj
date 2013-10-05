@@ -202,7 +202,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\InterestController.cs" />
+    <Compile Include="Controllers\InterestsController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\MenuExtensions.cs" />
     <Compile Include="Controllers\Utility.cs" />
@@ -221,6 +221,7 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\CompanyUser.cs" />
+    <Compile Include="Models\ForgotPasswordUser.cs" />
     <Compile Include="Opportunity.cs">
       <DependentUpon>TAP.tt</DependentUpon>
     </Compile>
@@ -268,26 +269,16 @@
     <Compile Include="User.cs">
       <DependentUpon>TAP.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserForgotPassword.cs">
+      <DependentUpon>TAP.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserRoll.cs">
       <DependentUpon>TAP.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\images\Interests\carousel1.png" />
-    <Content Include="Content\images\Interests\carousel10.png" />
-    <Content Include="Content\images\Interests\carousel2.png" />
-    <Content Include="Content\images\Interests\carousel3.png" />
-    <Content Include="Content\images\Interests\carousel4.png" />
-    <Content Include="Content\images\Interests\carousel5.png" />
-    <Content Include="Content\images\Interests\carousel6.png" />
-    <Content Include="Content\images\Interests\carousel7.png" />
-    <Content Include="Content\images\Interests\carousel8.png" />
-    <Content Include="Content\images\Interests\carousel9.png" />
-    <Content Include="Content\sitecss\css.css" />
-    <Content Include="Content\fonts\FRABK.svg" />
-    <Content Include="Content\fonts\GothamMedium.svg" />
-    <Content Include="Content\fonts\VAGRounded-Light.svg" />
     <Content Include="Content\images\arrows.png" />
+    <Content Include="Content\images\arrow_back.png" />
     <Content Include="Content\images\blank.gif" />
     <Content Include="Content\images\bullets.png" />
     <Content Include="Content\images\carousel1.png" />
@@ -300,12 +291,21 @@
     <Content Include="Content\images\carousel7.png" />
     <Content Include="Content\images\carousel8.png" />
     <Content Include="Content\images\carousel9.png" />
+    <Content Include="Content\images\cheackbox_bg.jpg" />
+    <Content Include="Content\images\check_radio_sheet.png" />
+    <Content Include="Content\images\comp1.jpg" />
+    <Content Include="Content\images\comp2.jpg" />
+    <Content Include="Content\images\comp3.jpg" />
+    <Content Include="Content\images\CompanyPictures\Coca-Cola.jpg" />
+    <Content Include="Content\images\company_add.jpg" />
     <Content Include="Content\images\downarrow.png" />
     <Content Include="Content\images\down_arrow.png" />
+    <Content Include="Content\images\down_arrow_company.png" />
     <Content Include="Content\images\fancybox_loading.gif" />
     <Content Include="Content\images\fancybox_overlay.png" />
     <Content Include="Content\images\fancybox_sprite.png" />
     <Content Include="Content\images\fb_btn.png" />
+    <Content Include="Content\images\icon_cancel.png" />
     <Content Include="Content\images\img1.jpg" />
     <Content Include="Content\images\img2.jpg" />
     <Content Include="Content\images\img3.jpg" />
@@ -315,10 +315,21 @@
     <Content Include="Content\images\interest1.jpg" />
     <Content Include="Content\images\interest2.jpg" />
     <Content Include="Content\images\interest3.jpg" />
+    <Content Include="Content\images\Interests\carousel1.png" />
+    <Content Include="Content\images\Interests\carousel10.png" />
+    <Content Include="Content\images\Interests\carousel2.png" />
+    <Content Include="Content\images\Interests\carousel3.png" />
+    <Content Include="Content\images\Interests\carousel4.png" />
+    <Content Include="Content\images\Interests\carousel5.png" />
+    <Content Include="Content\images\Interests\carousel6.png" />
+    <Content Include="Content\images\Interests\carousel7.png" />
+    <Content Include="Content\images\Interests\carousel8.png" />
+    <Content Include="Content\images\Interests\carousel9.png" />
     <Content Include="Content\images\joinus.png" />
     <Content Include="Content\images\left_arrow.png" />
     <Content Include="Content\images\left_arw.jpg" />
     <Content Include="Content\images\left_arw.png" />
+    <Content Include="Content\images\list_cancel.png" />
     <Content Include="Content\images\loading.gif" />
     <Content Include="Content\images\logo.jpg" />
     <Content Include="Content\images\logo_here.jpg" />
@@ -331,7 +342,10 @@
     <Content Include="Content\images\slider3.jpg" />
     <Content Include="Content\images\themes.gif" />
     <Content Include="Content\images\uparrow.png" />
+    <Content Include="Content\images\upload_company_logo.jpg" />
     <Content Include="Content\images\video_img.jpg" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\sitecss\css.css" />
     <Content Include="Content\sitecss\jquery.fancybox.css" />
     <Content Include="Content\sitecss\responsive.css" />
     <Content Include="Content\sitecss\responsiveslides.css" />
@@ -393,18 +407,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fb.html" />
     <Content Include="Global.asax" />
-    <Content Include="Content\fonts\FRABK.eot" />
-    <Content Include="Content\fonts\FRABK.otf" />
-    <Content Include="Content\fonts\FRABK.ttf" />
-    <Content Include="Content\fonts\FRABK.woff" />
-    <Content Include="Content\fonts\GothamMedium.eot" />
-    <Content Include="Content\fonts\GothamMedium.otf" />
-    <Content Include="Content\fonts\GothamMedium.ttf" />
-    <Content Include="Content\fonts\GothamMedium.woff" />
-    <Content Include="Content\fonts\VAGRounded-Light.eot" />
-    <Content Include="Content\fonts\VAGRounded-Light.otf" />
-    <Content Include="Content\fonts\VAGRounded-Light.ttf" />
-    <Content Include="Content\fonts\VAGRounded-Light.woff" />
     <Content Include="fonts\FRABK.eot" />
     <Content Include="fonts\FRABK.otf" />
     <Content Include="fonts\FRABK.svg" />
@@ -420,8 +422,25 @@
     <Content Include="fonts\VAGRounded-Light.svg" />
     <Content Include="fonts\VAGRounded-Light.ttf" />
     <Content Include="fonts\VAGRounded-Light.woff" />
+    <Content Include="Content\fonts\FRABK.eot" />
+    <Content Include="Content\fonts\FRABK.otf" />
+    <Content Include="Content\fonts\FRABK.svg" />
+    <Content Include="Content\fonts\FRABK.ttf" />
+    <Content Include="Content\fonts\FRABK.woff" />
+    <Content Include="Content\fonts\GothamMedium.eot" />
+    <Content Include="Content\fonts\GothamMedium.otf" />
+    <Content Include="Content\fonts\GothamMedium.svg" />
+    <Content Include="Content\fonts\GothamMedium.ttf" />
+    <Content Include="Content\fonts\GothamMedium.woff" />
+    <Content Include="Content\fonts\VAGRounded-Light.eot" />
+    <Content Include="Content\fonts\VAGRounded-Light.otf" />
+    <Content Include="Content\fonts\VAGRounded-Light.svg" />
+    <Content Include="Content\fonts\VAGRounded-Light.ttf" />
+    <Content Include="Content\fonts\VAGRounded-Light.woff" />
     <None Include="Properties\PublishProfiles\tapd.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Images\no-image.jpg" />
+    <Content Include="Images\no-logo.jpg" />
     <Content Include="Scripts\blockUI.js" />
     <Content Include="Scripts\FBLogin.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -445,14 +464,15 @@
     <Content Include="Scripts\myvalidations.js" />
     <Content Include="Scripts\responsiveslides.js" />
     <Content Include="Scripts\tapdlayout.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
@@ -501,11 +521,6 @@
       <DependentUpon>TAP.edmx</DependentUpon>
       <LastGenOutput>TAP.cs</LastGenOutput>
     </Content>
-    <Content Include="Views\Interest\Index.cshtml" />
-    <Content Include="Views\Interest\Details.cshtml" />
-    <Content Include="Views\Interest\Create.cshtml" />
-    <Content Include="Views\Interest\Edit.cshtml" />
-    <Content Include="Views\Interest\Delete.cshtml" />
     <Content Include="Views\Location\Index.cshtml" />
     <Content Include="Views\Location\Details.cshtml" />
     <Content Include="Views\Location\Create.cshtml" />
@@ -521,11 +536,20 @@
     <Content Include="Views\Home\Interest.cshtml" />
     <Content Include="Views\Home\Companies.cshtml" />
     <Content Include="Views\Home\AccountConfirmation.cshtml" />
+    <Content Include="Views\Home\ForgotPassword.cshtml" />
+    <Content Include="Views\Interests\Index.cshtml" />
+    <Content Include="Views\Interests\Details.cshtml" />
+    <Content Include="Views\Interests\Create.cshtml" />
+    <Content Include="Views\Interests\Edit.cshtml" />
+    <Content Include="Views\Interests\Delete.cshtml" />
+    <Content Include="Views\Home\Interests.cshtml" />
+    <Content Include="_CompanysLayout.cshtml" />
+    <Content Include="Views\Shared\_CompanysLayout.cshtml" />
+    <Content Include="Views\Company\CompanyDashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Assets\" />
-    <Folder Include="Content\images\CompanyPictures\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

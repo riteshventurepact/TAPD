@@ -12,14 +12,35 @@ $(document).ready(function()
 
     $('#usersignup').click(function () {
         if ($("#UserSignUpForm").valid()) {
-            SaveUser($('#username').val(),'U',$('#password').val());
+            if ($("#agreeU").is(':checked')) {
+                SaveUser($('#username').val(), 'U', $('#password').val());
+            }
+            else {
+                alert('Accept Terms and Conditions to continue.');
+            }
         }
     });
 
     $('#companysignup').click(function () {
         if ($("#CompanySignupForm").valid())
         {
-            SaveCompany($('#companyname').val(), $('#firstname').val(), $('#lastname').val(), $('#email').val(), $('#phone').val(), $('#cpassword').val())
+            if ($("#agreeC").is(':checked')) {
+                var email = $('#companyname').val();
+                email = email.replace(' ', '');
+                email = email.toLocaleLowerCase();
+                var regex = new RegExp("^((([a-zA-z]+(\.[a-zA-z0-9])?){1,250})(\d{0,30})?)\@(" + email + ").(([a-zA-z]+){2,5})$");
+                var result = regex.test($("#email").val());
+                if (result) {
+                    SaveCompany($('#companyname').val(), $('#firstname').val(), $('#lastname').val(), $('#email').val(), $('#phone').val(), $('#cpassword').val())
+                }
+                else {
+                    alert('Email id should be of Company Name specified.');
+                }
+
+            }
+            else {
+                alert('Accept Terms and Conditions to continue.');
+            }
         }
     });
 
@@ -44,20 +65,20 @@ $(document).ready(function()
                 minlength: 2,
                 email: true
             },
-            cpassword: {
+            password: {
                 required: true,
                 minlength: 5
             },
-            cconfirmpassword: {
+            confirmpassword: {
                 required: true,
                 minlength: 5,
-                equalTo: "#cpassword"
+                equalTo: "#password"
             },
-            email: {
-                required: true,
-                email: true
-            },
-            agree: "required"
+            //email: {
+            //    required: true,
+            //    email: true
+            //},
+           // agreeU: "required"
         }
         ,
         username: {
@@ -76,7 +97,7 @@ $(document).ready(function()
         },
         email: "Please enter a valid email address"
         ,
-        agree: "Please accept our policy",
+        //agreeU: "Please accept our policy",
         errorElement: "div",
         wrapper: "div",  // a wrapper around the error message
         errorPlacement: function (error, element) {
@@ -93,21 +114,30 @@ $(document).ready(function()
     // validate signup form on keyup and submit
     $("#CompanySignupForm").validate({
         rules: {
-            companyname: "required",
-            firstname: "required",
-            lastname: "required",
+            companyname: {
+                required: true,
+                minlength: 3
+            },
+            firstname: {
+                required: true,
+                minlength: 2
+            },
+            lastname: {
+                required: true,
+                minlength: 2
+            },
             username: {
                 required: true,
                 minlength: 2
             },
-            password: {
+            cpassword: {
                 required: true,
                 minlength: 5
             },
-            confirmpassword: {
+            cconfirmpassword: {
                 required: true,
                 minlength: 5,
-                equalTo: "#password"
+                equalTo: "#cpassword"
             },
             email: {
                 required: true,
@@ -117,8 +147,8 @@ $(document).ready(function()
                 required: true
                 //,
                 //phoneUS: true
-            },
-            agree: "required"
+            }//,
+           // agree: "required"
         }
         ,
         messages: {

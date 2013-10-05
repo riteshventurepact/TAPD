@@ -21,14 +21,14 @@
                                        var actionName = ViewContext.Controller.ValueProvider.GetValue("action").RawValue.ToString();
                                        if (actionName.ToString() == "Default")
                                        {
-                                           actionName = "-- Select --";
+                                           actionName = "DISCOVER";
                                        }
                                    }
                                     <span id="selected">@actionName</span>
                                     <ul class="dropdown">
-                                        <li><a href="#">Discover</a></li>
+                                        <li>@Html.MenuItem("DISCOVER", "Default", "Home")</li>
                                         <li><a href="#">OPPORTUNITIES</a></li>
-                                        <li>@Html.MenuItem("INTERESTS", "Interest", "Home")</li>
+                                        <li>@Html.MenuItem("INTERESTS", "Interests", "Home")</li>
                                         <li>@Html.MenuItem("COMPANIES", "Companies", "Home")</li>
                                         <li><a href="#">COLLABORATIONS</a></li>
                                     </ul>
@@ -137,13 +137,13 @@
                                     </li> 
                                 </ul>
                                 <div id="user-signup" class="form-action show">
-                                    <div onclick="login()" class="signup_fb"><a href="javascript:void(0);"></a></div>
+                                   @* <div onclick="login()" class="signup_fb"><a href="javascript:void(0);"></a></div>
                                     <div id="fb-root"></div>
-                                    <p>......................................................................</p>
+                                    <p>......................................................................</p>*@
                                     <form class="form" id="UserSignUpForm" name="UserSignUpForm">
                                         <ul>
                                             <li>
-                                                <input type="text" name="username" id="username" placeholder="EMAIL" />
+                                                <input type="text" name="username" id="username" placeholder="SCHOOL EMAIL" />
                                             </li>
                                             <li>
                                                 <input type="password" name="password" id="password" placeholder="PASSWORD" />
@@ -152,7 +152,7 @@
                                                 <input type="password" name="confirmpassword" id="confirmpassword" placeholder="RETYPE PASSWORD" />
                                             </li>
                                             <div class="gray_text">
-                                                <input type="checkbox" value="" id="agree" name="agree">
+                                                <input type="checkbox" value="" id="agreeU" name="agreeU">
                                                 &nbsp;I have read and agree to the <a href="#">Terms &amp; Conditions.</a>
                                             </div>
 
@@ -190,7 +190,7 @@
                                                 <input type="password" placeholder="CONFIRM PASSWORD" id="cconfirmpassword" name="cconfirmpassword" />
                                             </li>
                                             <div class="gray_text">
-                                                <input name="agree" type="checkbox" value="" id="agree">
+                                                <input name="agreeC" type="checkbox" value="" id="agreeC">
                                                 &nbsp;I have read and agree to the <a href="#">Terms &amp; Conditions.</a>
                                             </div>
 
@@ -229,15 +229,58 @@
                 <div class="callbacks_container">
                     <ul class="rslides" id="slider4">
                         <li>
-                            <img src="~/Content/images/slider1.jpg" alt="">
+                             @{ 
+                                       var actionName2 = ViewContext.Controller.ValueProvider.GetValue("action").RawValue.ToString();
+                                       if (actionName2.ToString() == "Default")
+                                       {
+                                           <img src="~/Content/images/slider1.jpg" alt="">
+                                       }
+                                       else if (actionName2.ToString() == "Companies")
+                                       {
+                                           <img src="~/Content/images/comp1.jpg" alt="">
+                                       }
+                                         else if (actionName2.ToString() == "Interests")
+                                       {
+                                           <img src="~/Content/images/interest1.jpg" alt="">
+                                       }
+                                   }
+                            
                             <!--<p class="caption">This is a caption</p>-->
                         </li>
                         <li>
-                            <img src="~/Content/images/slider2.jpg" alt="">
+                             @{ 
+                                 var actionName3 = ViewContext.Controller.ValueProvider.GetValue("action").RawValue.ToString();
+                                 if (actionName3.ToString() == "Default")
+                                 {
+                                            <img src="~/Content/images/slider2.jpg" alt="">
+                                 }
+                                 else if (actionName3.ToString() == "Companies")
+                                 {
+                                           <img src="~/Content/images/comp2.jpg" alt="">
+                                 }
+                                 else if (actionName2.ToString() == "Interests")
+                                 {
+                                           <img src="~/Content/images/interest2.jpg" alt="">
+                                 }
+                                       }
                             <!--<p class="caption">This is another caption</p>-->
                         </li>
                         <li>
-                            <img src="~/Content/images/slider3.jpg" alt="">
+                              @{ 
+                                  var actionName4 = ViewContext.Controller.ValueProvider.GetValue("action").RawValue.ToString();
+                                  if (actionName4.ToString() == "Default")
+                                  {
+                                            <img src="~/Content/images/slider3.jpg" alt="">
+                                  }
+                                  else if (actionName4.ToString() == "Companies")
+                                  {
+                                           <img src="~/Content/images/comp3.jpg" alt="">
+                                  }
+                                     else if (actionName2.ToString() == "Interests")
+                                       {
+                                           <img src="~/Content/images/interest3.jpg" alt="">
+                                       }
+                                       }
                             <!--<p class="caption">The third caption</p>-->
                         </li>
                     </ul>

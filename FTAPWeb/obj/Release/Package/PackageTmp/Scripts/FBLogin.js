@@ -44,6 +44,9 @@ function login() {
 }
 //For Facebook User Creation
 function createFBUser(e, p, f, l, g, ut) {
+    $("#signup").block({
+        message: 'Processing'
+    });
     $.ajax({
         data: "{'UserName':'" + e + "','UserType':'" + ut + "','EmailId':'" + e + "','Password':'" + p + "','FirstName':'" + f + "','LastName':'" + l + "','Gender':'" + g + "'}",
         type: "POST",
@@ -74,10 +77,10 @@ function SaveUser(usrname, usertype, usrPass)
         success: function (data) {
             //alert(data.UserId);
             $("#signup").unblock();
-            $("#User_Name").val('');
-            $("#User_Password").val('');
-            $("#User_ConfirmPassword").val('');
-            $("#agreementCHeckBox").prop('checked', false);
+            $("#username").val('');
+            $("#password").val('');
+            $("#confirmpassword").val('');
+            $("#agreeU").prop('checked', false);
          
             alert(data);
             //alert('User created successfully, Please check your email to confirm your registration.',false);
@@ -87,10 +90,10 @@ function SaveUser(usrname, usertype, usrPass)
         error: function (a, b, c)
         {
             alert("Error: " + a); $("#signup").unblock();
-            $("#User_Name").val('');
-            $("#User_Password").val('');
-            $("#User_ConfirmPassword").val('');
-            $("#agreementCHeckBox").prop('checked', false);
+            $("#username").val('');
+            $("#password").val('');
+            $("#confirmpassword").val('');
+            $("#agreeU").prop('checked', false);
         }
     });
 }
@@ -101,16 +104,35 @@ function SaveCompany(Cpmany_Name, Cpmany_User_First_Name, Cpmany_User_Last_Name,
         message: 'Processing'
     });
 
-    //alert("{'CompanyName':'" + Cpmany_Name + "','FirstName':'" + Cpmany_User_First_Name + "','LastName':'" + Cpmany_User_Last_Name + "','Email':'" + Cpmany_Email + "','Phone':'" + Cpmany_Phone + "','Password':'" + Cpmany_Password + "'}");
-
     $.ajax({
         data: "{'CompanyName':'" + Cpmany_Name + "','FirstName':'" + Cpmany_User_First_Name + "','LastName':'" + Cpmany_User_Last_Name + "','Email':'" + Cpmany_Email + "','Phone':'"+Cpmany_Phone+"','Password':'"+Cpmany_Password+"'}",
         type: "POST",
         dataType: "json",
         contentType: "application/json;charset=utf-8",
         url: "/api/Company/CreateCompany",
-        success: function (data) { alert(data); },
-        error: function (a, b, c) { }
+        success: function (data) {
+            $("#company-signup").unblock();
+            $("#companyname").val('');
+            $("#firstname").val('');
+            $("#lastname").val('');
+            $("#email").val('');
+            $("#phone").val('');
+            $("#cpassword").val('');
+            $("#cconfirmpassword").val('');
+            $("#agreeC").prop('checked', false);
+            alert(data);
+        },
+        error: function (a, b, c) {
+            alert("Error: " + a); $("#company-signup").unblock();
+            $("#companyname").val('');
+            $("#firstname").val('');
+            $("#lastname").val('');
+            $("#email").val('');
+            $("#phone").val('');
+            $("#cpassword").val('');
+            $("#cconfirmpassword").val('');
+            $("#agreeC").prop('checked', false);
+        }
     });
 }
 

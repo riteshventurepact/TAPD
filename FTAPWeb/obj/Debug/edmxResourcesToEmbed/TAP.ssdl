@@ -13,6 +13,7 @@
     <EntitySet Name="Students" EntityType="TAPDModel.Store.Students" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="sysdiagrams" EntityType="TAPDModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="UploadRequirments" EntityType="TAPDModel.Store.UploadRequirments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserForgotPassword" EntityType="TAPDModel.Store.UserForgotPassword" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="UserRolls" EntityType="TAPDModel.Store.UserRolls" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Users" EntityType="TAPDModel.Store.Users" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK_CollaborationImages_Collaborations" Association="TAPDModel.Store.FK_CollaborationImages_Collaborations">
@@ -171,6 +172,20 @@
     <Property Name="RequirementName" Type="varchar" MaxLength="250" />
     <Property Name="EntryBy" Type="int" />
     <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserForgotPassword">
+    <Key>
+      <PropertyRef Name="ForgotPasswordId" />
+    </Key>
+    <Property Name="ForgotPasswordId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="PasswordActivationCode" Type="varchar" MaxLength="250" />
+    <Property Name="OldPassword" Type="varchar" MaxLength="50" />
+    <Property Name="NewPassword" Type="varchar" MaxLength="50" />
+    <Property Name="ExpirationDate" Type="datetime" />
+    <Property Name="UserClicked" Type="bit" />
+    <Property Name="WasPasswordChanged" Type="bit" />
+    <Property Name="ClickedDateTime" Type="datetime" />
   </EntityType>
   <EntityType Name="UserRolls">
     <Key>

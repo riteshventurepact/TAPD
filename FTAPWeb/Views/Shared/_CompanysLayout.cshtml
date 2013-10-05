@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/designercss")
+    @Scripts.Render("~/bundles/modernizr")
+    @using FTAPWeb.Controllers
+</head>
+<body>
+    <!--Start of designer html-->
+    <div id="main_page">
+        <div id="header_main">
+            <div id="header_content">
+                <div class="head_left">
+                    <form id="form1" name="form1" method="post" action="">
+                        <section class="main">
+                            <div class="wrapper-demo">
+                                <div id="dd" class="wrapper-dropdown-2" tabindex="1">
+                                   @{ 
+                                       var actionName = ViewContext.Controller.ValueProvider.GetValue("action").RawValue.ToString();
+                                       if (actionName.ToString() == "Default")
+                                       {
+                                           actionName = "DISCOVER";
+                                       }
+                                   }
+                                    <span id="selected">@actionName</span>
+                                    <ul class="dropdown">
+                                        <li>@Html.MenuItem("DISCOVER", "Default", "Home")</li>
+                                        <li><a href="#">OPPORTUNITIES</a></li>
+                                        <li>@Html.MenuItem("INTERESTS", "Interests", "Home")</li>
+                                        <li>@Html.MenuItem("COMPANIES", "Companies", "Home")</li>
+                                        <li><a href="#">COLLABORATIONS</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        <a href="#search_boxoutr" class="search_icon fancybox"></a>
+                        <div id="search_boxoutr">
+                            <input type="text" />
+                            <p>Being typing to search</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="head_mid">@*<a> href="index.html">
+                    <img src="~/Content/images/logo.jpg" width="127" height="47" /></a>*@
+                    @Html.ActionLink(" ", "Default", "Home", null, new { @class = "Edit" })
+                </div>
+                <div class="head_right">
+                    <!--start join us-->
+                    <span class='popbox'>
+                        <!--start login-->
+                        <a id="dashboard_outr_icon" href="javascript:void(0)">
+                            <img src="~/Content/images/joinus.png" /></a>
+                        
+                        <!--end of start login-->
+                    </span>
+                                <!--end of start join us-->
+                    <div id="dashboard_outr" class="dashboard_outr">
+                        <div class="dashboard">
+                            <ul>
+                                <li><a href="javascript:void(0)">Dashboard</a></li>
+                                <li><a href="#login" class="fancybox">Log In</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+                <div class="header_arrow"></div>
+            </div>
+            <!--end of header_content-->
+        </div>
+        <!--end of header_main-->
+       
+                <div id="content">
+                    @RenderBody()
+                </div>
+            </div>
+      
+    <!--end of main_page-->
+
+    <!--End of designer html-->
+     
+   @Scripts.Render("~/bundles/jquery")
+   @RenderSection("scripts", required: false)
+   @Scripts.Render("~/Scripts/designerjs")
+</body>
+</html>

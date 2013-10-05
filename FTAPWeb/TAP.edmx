@@ -18,6 +18,7 @@
           <EntitySet Name="Students" EntityType="TAPDModel.Store.Students" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="sysdiagrams" EntityType="TAPDModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="UploadRequirments" EntityType="TAPDModel.Store.UploadRequirments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserForgotPassword" EntityType="TAPDModel.Store.UserForgotPassword" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="UserRolls" EntityType="TAPDModel.Store.UserRolls" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Users" EntityType="TAPDModel.Store.Users" store:Type="Tables" Schema="dbo" />
           <AssociationSet Name="FK_CollaborationImages_Collaborations" Association="TAPDModel.Store.FK_CollaborationImages_Collaborations">
@@ -177,6 +178,20 @@
           <Property Name="EntryBy" Type="int" />
           <Property Name="UpdatedOn" Type="datetime" />
         </EntityType>
+        <EntityType Name="UserForgotPassword">
+          <Key>
+            <PropertyRef Name="ForgotPasswordId" />
+          </Key>
+          <Property Name="ForgotPasswordId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="PasswordActivationCode" Type="varchar" MaxLength="250" />
+          <Property Name="OldPassword" Type="varchar" MaxLength="50" />
+          <Property Name="NewPassword" Type="varchar" MaxLength="50" />
+          <Property Name="ExpirationDate" Type="datetime" />
+          <Property Name="UserClicked" Type="bit" />
+          <Property Name="WasPasswordChanged" Type="bit" />
+          <Property Name="ClickedDateTime" Type="datetime" />
+        </EntityType>
         <EntityType Name="UserRolls">
           <Key>
             <PropertyRef Name="RollId" />
@@ -320,6 +335,7 @@
             <Parameter Name="Phone" Mode="In" Type="String" />
             <Parameter Name="Password" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="UserForgotPasswords" EntityType="TAPDModel.UserForgotPassword" />
         </EntityContainer>
         <EntityType Name="CollaborationImage">
           <Key>
@@ -550,6 +566,20 @@
         <ComplexType Name="pCreateCompanyUser_Result">
           <Property Type="Int32" Name="Column1" Nullable="false" />
         </ComplexType>
+        <EntityType Name="UserForgotPassword">
+          <Key>
+            <PropertyRef Name="ForgotPasswordId" />
+          </Key>
+          <Property Type="Int32" Name="ForgotPasswordId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserId" />
+          <Property Type="String" Name="PasswordActivationCode" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ExpirationDate" Precision="3" />
+          <Property Type="Boolean" Name="UserClicked" />
+          <Property Type="Boolean" Name="WasPasswordChanged" />
+          <Property Type="DateTime" Name="ClickedDateTime" Precision="3" />
+          <Property Type="String" Name="NewPassword" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OldPassword" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -744,6 +774,21 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="pCreateCompanyUser" FunctionName="TAPDModel.Store.pCreateCompanyUser" />
+          <EntitySetMapping Name="UserForgotPasswords">
+            <EntityTypeMapping TypeName="TAPDModel.UserForgotPassword">
+              <MappingFragment StoreEntitySet="UserForgotPassword">
+                <ScalarProperty Name="OldPassword" ColumnName="OldPassword" />
+                <ScalarProperty Name="NewPassword" ColumnName="NewPassword" />
+                <ScalarProperty Name="ClickedDateTime" ColumnName="ClickedDateTime" />
+                <ScalarProperty Name="WasPasswordChanged" ColumnName="WasPasswordChanged" />
+                <ScalarProperty Name="UserClicked" ColumnName="UserClicked" />
+                <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+                <ScalarProperty Name="PasswordActivationCode" ColumnName="PasswordActivationCode" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ForgotPasswordId" ColumnName="ForgotPasswordId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
