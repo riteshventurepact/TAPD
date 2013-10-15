@@ -38,7 +38,7 @@
                         <a href="#search_boxoutr" class="search_icon fancybox"></a>
                         <div id="search_boxoutr">
                             <input type="text" />
-                            <p>Being typing to search</p>
+                            <p>Begin typing to search</p>
                         </div>
                     </form>
                 </div>
@@ -57,10 +57,10 @@
                                 <div class="flat-form">
                                     <ul class="tabs1">
                                         <li>
-                                            <a href="#user-login" class="active2">&nbsp;&nbsp;User Log In&nbsp;</a>
+                                            <a href="#user-login" class="active2">Student Log In</a>
                                         </li>
                                         <li>
-                                            <a href="#company-login">&nbsp;Company Log In&nbsp;</a>
+                                            <a href="#company-login">Company Log In</a>
                                         </li>
                                     </ul>
                                     <div id="user-login" class="form-action show2">
@@ -124,13 +124,13 @@
                         </div>
                         <!--end of start login-->
                     </span>
-                    <p class="joinus"><a class="fancybox" href="#signup">Join us</a></p>
+                    <p class="joinus"><a class="fancybox" href="#signup">Join us!</a></p>
                     <div id="signup">
                         <div>
                             <div class="flat-form">
                                 <ul class="tabs">
                                     <li>
-                                        <a href="#user-signup" class="active">User Sign Up</a>
+                                        <a href="#user-signup" class="active">Student Sign Up</a>
                                     </li>
                                     <li>
                                         <a href="#company-signup">Company Sign Up</a>
@@ -169,13 +169,13 @@
                                     <form class="form" name="CompanySignupForm" id="CompanySignupForm">
                                         <ul>
                                             <li>
-                                                <input type="text" placeholder="COMPANY NAME" name="companyname" id="companyname" />
+                                                <input type="text" placeholder="COMPANY NAME"  name="companyname" id="companyname" />
                                             </li>
                                             <li>
-                                                <input type="text" placeholder="FIRST NAME" name="firstname" id="firstname" />
+                                                <input type="text" placeholder="FIRST NAME"  name="firstname" id="firstname" />
                                             </li>
                                             <li>
-                                                <input type="text" placeholder="LAST NAME" name="lastname" id="lastname" />
+                                                <input type="text" placeholder="LAST NAME"  name="lastname" id="lastname" />
                                             </li>
                                             <li>
                                                 <input type="text" placeholder="EMAIL (Needs to be a company email)" id="email" name="email" />
@@ -184,11 +184,12 @@
                                                 <input type="text" placeholder="PHONE NUMBER" id="phone" name="phone" />
                                             </li>
                                             <li>
-                                                <input type="password" placeholder="PASSWORD"  id="cpassword" name="cpassword"/>
+                                                <input type="password" placeholder="PASSWORD" id="cpassword" name="cpassword"/>
                                             </li>
                                             <li>
                                                 <input type="password" placeholder="CONFIRM PASSWORD" id="cconfirmpassword" name="cconfirmpassword" />
                                             </li>
+
                                             <div class="gray_text">
                                                 <input name="agreeC" type="checkbox" value="" id="agreeC">
                                                 &nbsp;I have read and agree to the <a href="#">Terms &amp; Conditions.</a>
@@ -239,9 +240,13 @@
                                        {
                                            <img src="~/Content/images/comp1.jpg" alt="">
                                        }
-                                         else if (actionName2.ToString() == "Interests")
+                                       else if (actionName2.ToString() == "Interests")
                                        {
                                            <img src="~/Content/images/interest1.jpg" alt="">
+                                       }
+                                       else
+                                       {
+                                           <img src="~/Content/images/slider1.jpg" alt="">
                                        }
                                    }
                             
@@ -262,6 +267,10 @@
                                  {
                                            <img src="~/Content/images/interest2.jpg" alt="">
                                  }
+                                 else
+                                       {
+                                           <img src="~/Content/images/slider1.jpg" alt="">
+                                       }
                                        }
                             <!--<p class="caption">This is another caption</p>-->
                         </li>
@@ -276,11 +285,15 @@
                                   {
                                            <img src="~/Content/images/comp3.jpg" alt="">
                                   }
-                                     else if (actionName2.ToString() == "Interests")
-                                       {
+                                  else if (actionName2.ToString() == "Interests")
+                                  {
                                            <img src="~/Content/images/interest3.jpg" alt="">
+                                  }
+                                  else
+                                       {
+                                           <img src="~/Content/images/slider1.jpg" alt="">
                                        }
-                                       }
+                              }
                             <!--<p class="caption">The third caption</p>-->
                         </li>
                     </ul>

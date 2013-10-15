@@ -45,13 +45,58 @@ namespace FTAPWeb.Controllers
         }
 
 
-        public ActionResult CompanyDashboard(string CompanyIdEncrypted)
+        public ActionResult CompanyDashboard()
         {
+            int? id = SessionHelper.USERID;
+            FTAPWeb.User user = db.Users.Find(id);
+            ViewBag.UserDetails = user;
+            FTAPWeb.Company company = db.Companies.Find(user.CompanyId);
+            ViewBag.CompanyDetails = company;
+            return View();
+        }
+
+        public ActionResult CompanyAccountSetting()
+        {
+            int? id = SessionHelper.USERID;
+            FTAPWeb.User user = db.Users.Find(id);
+            ViewBag.UserDetails = user;
+            FTAPWeb.Company company = db.Companies.Find(user.CompanyId);
+            ViewBag.CompanyDetails = company;
+
             //string id = Utility.Decrypt(CompanyIdEncrypted,true);
-            Company company = db.Companies.Find(CompanyIdEncrypted);
+            
             //ViewBag.IndustryId = new SelectList(db.Interests, "InterestId", "InterestName");
             //ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "Location1");
-            return View(company);
+            return View();
+        }
+
+        public ActionResult CompanyInformation()
+        {
+            int? id = SessionHelper.USERID;
+            FTAPWeb.User user = db.Users.Find(id);
+            ViewBag.UserDetails = user;
+            FTAPWeb.Company company = db.Companies.Find(user.CompanyId);
+            ViewBag.CompanyDetails = company;
+           
+            return View();
+        }
+
+
+
+
+        public ActionResult CompanyPersonalisation()
+        {
+            int? id = SessionHelper.USERID;
+            FTAPWeb.User user = db.Users.Find(id);
+            ViewBag.UserDetails = user;
+            FTAPWeb.Company company = db.Companies.Find(user.CompanyId);
+            ViewBag.CompanyDetails = company;
+
+
+            var inter = (from p in db.Interests where p.IsActive == true select p).ToList();
+            ViewBag.InterestList = inter;
+
+            return View();
         }
 
         //

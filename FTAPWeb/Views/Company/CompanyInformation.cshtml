@@ -1,0 +1,43 @@
+﻿@model FTAPWeb.Company
+
+@{
+    ViewBag.Title = "CompanyInformation";
+    Layout = "~/Views/Shared/_CompanysLayout.cshtml";
+}
+<div id="middle">
+        	
+            <div class="clear"></div>
+    <div class="compnay_info_inner">
+                <form class="company_info_form" id="compInfoContinueform" name="compInfoContinueform">
+                	<div class="company_form_inner">
+                   		<label>COMPANY NAME</label>
+                    
+                        
+                    	<input type="text" placeholder="Type Company Name Here..." value="@ViewBag.CompanyDetails.CompanyName" id="CompEditInfoCompName"/>
+                    </div>
+                    <div class="company_form_inner">
+                        <label>FIRST NAME</label>
+                        <input type="text" placeholder="Type First Name Here..." value="@ViewBag.UserDetails.FirstName" id="CompEditInfoFirstName"/>
+                    </div>
+                    <div class="company_form_inner">
+                        <label>LAST NAME</label>
+                        <input type="text" placeholder="Type First Name Here..." value="@ViewBag.UserDetails.LastName" id="CompEditInfoLasttName"/>
+                    </div>
+                    <div class="company_form_inner">
+                        <label>COMPANY EMAIL</label>
+                        <input type="text" placeholder="Type First Name Here..." value="@ViewBag.UserDetails.EmailId" readonly="true"/>
+                    </div>
+                    <div class="company_form_inner">
+                        <label>PHONE NUMBER</label>
+                        <input type="text" placeholder="Type First Name Here..." value="@ViewBag.UserDetails.Phone" id="CompEditInfoCompPhone"/>
+                    </div>
+                    <div class="company_form_inner">
+                    	<label></label>
+                        
+                        <input type="button" class="button" value="CONTINUE" id="compInfoContinue" name="compInfoContinue"/>
+                    </div>
+                </form>
+      		</div>
+
+    </div>
+

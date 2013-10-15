@@ -70,7 +70,7 @@ namespace FTAPWeb.Controllers
             }
         }
 
-        public static string SendRegisterationEmail(int userid, string email, string firstname, string lastname)
+        public static string SendRegisterationEmail(int userid, string email, string firstname, string lastname,string emailbody="")
         {
             try
             {
@@ -90,7 +90,14 @@ namespace FTAPWeb.Controllers
 
                 string s = Utility.Encrypt(userid.ToString(), true);
                 //string x = Decrypt(s, true);
-                objMailParent.Body = "Dear " + firstname + " " + lastname + ",<br/><br/>Thanks for your registration in TAPD. In order to complete your registration please verify your email by clicking on the <a href=' " + WebConfigurationManager.AppSettings["WebsiteUrl"].ToString() + "/Home/AccountConfirmation/" + s + "'  >link</a><br/><br/>Thanks<br/>TAPD Team";
+                if (emailbody == "")
+                {
+                    objMailParent.Body = "Dear " + firstname + " " + lastname + ",<br/><br/>Thanks for your registration in TAPD. In order to complete your registration please verify your email by clicking on the <a href=' " + WebConfigurationManager.AppSettings["WebsiteUrl"].ToString() + "/Home/AccountConfirmation/" + s + "'  >link</a><br/><br/>Thanks<br/>TAPD Team";
+                }
+                else
+                {
+                    objMailParent.Body = emailbody;
+                }
                 objMailParent.Priority = MailPriority.High;
                 smtp.Send(objMailParent);
                 objMailParent.Dispose();
@@ -153,6 +160,5 @@ namespace FTAPWeb.Controllers
                 return "This email doesn't exists in TAPD user list.";
             }
         }
-
     }
 }

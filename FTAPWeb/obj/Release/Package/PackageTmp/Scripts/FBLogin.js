@@ -144,7 +144,14 @@ function ValidateUser(e, p, ut) {
         contentType: "application/json;charset=utf-8",
         url: "/api/User/ValidateUser",
         success: function (data) {
-            alert(data);
+            if (data == "CULogged In")
+            {
+                window.location.href = '/Company/CompanyDashboard';
+            }
+            else if (data == "ULogged In")
+            {
+                window.location.href = '/Company/CompanyDashboard';
+            }
         },
         error: function (a, b, c) {
             alert(a.responseText);
@@ -155,7 +162,7 @@ function ValidateUser(e, p, ut) {
 function forgotpwd()
 {
     var email = $('#txtresetpwd').val();
-    var match_email = /^((([a-zA-z]+(\.[a-zA-z0-9])?){1,250})(\d{0,30})?)\@((([a-zA-z]+){1,250}))\.(([a-zA-z]+){2,5})$/;
+    var match_email = /^((([a-zA-z]+(\.[a-zA-z0-9])?){1,250})(\d{0,30})?)\@((([a-zA-z]+){1,250}))\.(([a-zA-z.]+){2,5})$/;
     var result = match_email.test(email);
     if (result) {
         $.ajax({
@@ -176,6 +183,24 @@ function forgotpwd()
         alert("Please enter a valid email address");
     }
 }
+
+// code to change
+function ChangeUserPassword(oldp, newp) {
+    $.ajax({
+        data: "{'oldPass':'" + oldp + "','NewPass':'" + newp + "'}",
+        type: "POST",
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        url: "/api/User/ChangeUserPassword",
+        success: function (data) {
+            alert(data);
+        },
+        error: function (a, b, c) {
+            alert(a.responseText);
+        }
+    });
+}
+
 
 
 

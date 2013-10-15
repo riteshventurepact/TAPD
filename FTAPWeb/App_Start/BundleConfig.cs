@@ -41,6 +41,7 @@ namespace FTAPWeb
                      "~/Scripts/tapdlayout.js",
                      "~/Scripts/blockUI.js",
                      "~/Scripts/jquery.validate.js",
+                     "~/Scripts/additional-methods.js",
                      "~/Scripts/myvalidations.js",
                      "~/Scripts/FBLogin.js"
                 ));

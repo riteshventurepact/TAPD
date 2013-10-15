@@ -79,6 +79,7 @@
           <Property Name="ThirdAdminRole" Type="varchar" MaxLength="150" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
           <Property Name="UpdatedOn" Type="datetime" />
+          <Property Name="CompanySize" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="CompanyMailContacts">
           <Key>
@@ -158,6 +159,7 @@
           <Property Name="Year" Type="int" />
           <Property Name="Language" Type="varchar" MaxLength="50" />
           <Property Name="UpdatedOn" Type="datetime" />
+          <Property Name="School" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -371,6 +373,7 @@
           <Property Type="String" Name="ThirdAdminEmail" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="ThirdAdminRole" MaxLength="150" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Interest" Relationship="TAPDModel.FK_Companies_Interests" FromRole="Company" ToRole="Interest" />
+          <Property Type="String" Name="CompanySize" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="JobType">
           <Key>
@@ -429,6 +432,7 @@
           <Property Name="Year" Type="Int32" />
           <Property Name="Language" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+          <Property Type="String" Name="School" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="UserRoll">
           <Key>
@@ -601,6 +605,7 @@
           <EntitySetMapping Name="Companies">
             <EntityTypeMapping TypeName="TAPDModel.Company">
               <MappingFragment StoreEntitySet="Companies">
+                <ScalarProperty Name="CompanySize" ColumnName="CompanySize" />
                 <ScalarProperty Name="ThirdAdminRole" ColumnName="ThirdAdminRole" />
                 <ScalarProperty Name="ThirdAdminEmail" ColumnName="ThirdAdminEmail" />
                 <ScalarProperty Name="SecondaryAdminRole" ColumnName="SecondaryAdminRole" />
@@ -671,6 +676,7 @@
           <EntitySetMapping Name="Students">
             <EntityTypeMapping TypeName="TAPDModel.Student">
               <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="School" ColumnName="School" />
                 <ScalarProperty Name="StudentDetailId" ColumnName="StudentDetailId" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />

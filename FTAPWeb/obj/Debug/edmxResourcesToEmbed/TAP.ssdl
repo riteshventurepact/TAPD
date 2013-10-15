@@ -74,6 +74,7 @@
     <Property Name="ThirdAdminRole" Type="varchar" MaxLength="150" />
     <Property Name="IsActive" Type="bit" Nullable="false" />
     <Property Name="UpdatedOn" Type="datetime" />
+    <Property Name="CompanySize" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="CompanyMailContacts">
     <Key>
@@ -153,6 +154,7 @@
     <Property Name="Year" Type="int" />
     <Property Name="Language" Type="varchar" MaxLength="50" />
     <Property Name="UpdatedOn" Type="datetime" />
+    <Property Name="School" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>

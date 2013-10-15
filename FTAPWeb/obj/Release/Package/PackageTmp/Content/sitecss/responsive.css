@@ -1,5 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
+/* 1864 screens start {SAhil} */
+@media only screen and (min-width : 1864px)
+{	
+.tabs a
+{
+	padding: 15px 45px 18px 30px;
+}
+.tabs1 a
+{
+	padding: 15px 46px 18px 30px;
+}
+}
+/* 1864 screens end {SAhil} */
 /* 800*600 screens start {SAhil} */
 @media only screen and (min-width : 800px) and (max-width : 1023px)
 {	
@@ -89,6 +102,16 @@
 	padding-left:15px;
 }
 /*23changes end */
+/*1oct changes start */
+.compnay_info_inner
+{
+	width:100%;
+}
+
+
+/*1oct changes end */
+
+
 }
 /* 768*1024 screens start {SAhil} */
 @media only screen and (min-width : 768px) and (max-width : 1023px)
@@ -181,6 +204,23 @@
 	height:210px;
 }
 /*23changes end */
+/*1oct changes start */
+.compnay_info_inner
+{
+	width:100%;
+}
+
+/*3oct changes start */
+.skills_edit_inner 
+{
+    width: 40%;
+}
+/*3oct changes end */
+
+
+
+
+/*1oct changes end */
 }
 
 /* 768*1024 screens end {SAhil} */
@@ -416,6 +456,18 @@ ol, ul
 	height:186px;
 }
 /*23changes end */
+/*1oct changes start */
+.compnay_info_inner
+{
+	width:100%;
+}
+/*1oct changes end */
+/*3oct changes start */
+.skills_edit_inner 
+{
+    width: 40%;
+}
+/*3oct changes end */
 }
 /* 600*800 screens end {SAhil} */
 /* 568*320 screens start {SAhil} */
@@ -452,6 +504,14 @@ ol, ul
     font-size: 12px;
     line-height: 20px;
 }
+/*1oct changes start */
+.compnay_info_inner
+{
+	width:100%;
+}
+
+
+/*1oct changes end */
 }
 /* 480*320 screens start {SAhil} */
 @media only screen and (min-width : 480px) and (max-width : 599px)
@@ -697,6 +757,26 @@ ol, ul
 	padding-left:15px;
 }
 /*23changes end */
+/*1oct changes start */
+.compnay_info_inner
+{
+	width:100%;
+}
+
+
+/*1oct changes end */
+
+/* 3oct */
+.company_cancel {
+    margin-right: 17px;
+}
+.skills_edit_inner {
+    width: 55%;
+}
+.company_form_inner label {
+    font-size: 12px;
+    padding-top: 7px;
+}
 }
 /* 480*320 screens start {SAhil} */
 /* 380*685 android galaxy screens start {SAhil} */
@@ -867,6 +947,34 @@ ol, ul
     width: 88%;
 }
 /*23changes end */
+/*1oct changes start */
+.compnay_info_inner
+{
+	width:100%;
+}
+
+/*3 Oct */
+.company_form_inner label {
+ font-size: 10px; padding-top:0px;
+  width: 24%;
+}
+.company_add {
+    width: 76%;
+}
+.skills_edit_inner {
+ width: 60%;
+}
+.company_form_inner input {
+     padding-left: 10px;
+}
+.company_form_inner input.button {
+     margin-right: 17px;
+   
+}
+
+
+
+/*1oct changes end */
 }
 /* 380*685 android galaxy screens end {SAhil} */
 /* 320*480 screens start {SAhil} */
@@ -1174,6 +1282,37 @@ ol, ul
 	width: 84%;
 }
 /*23changes end */
+/*1oct changes start */
+.compnay_info_inner
+{
+	width:100%;
+}
+
+
+/*1oct changes end */
+
+/* 3oct */
+.company_form_inner label {
+    font-size: 9px;
+}
+.company_form_inner input {
+    font-size: 9px;
+    padding-left: 5px;
+    width: 66%;
+}
+.skills_edit_inner {
+    width: 77%;
+}
+.company_info_title {
+    margin-left: 0;
+}
+.company_cancel {
+    margin-right: 0;
+    margin-top: -25px;
+}
+.company_form_inner label {
+    padding-top: 7px;
+}
 }
 /* 320*480 screens start {SAhil} */
 

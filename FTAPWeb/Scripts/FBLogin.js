@@ -7,6 +7,8 @@
 //    fjs.parentNode.insertBefore(js, fjs);
 //}(document, 'script', 'facebook-jssdk'));
 
+$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
+
 (function (d, debug) {
     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
     if (d.getElementById(id)) { return; }
@@ -144,7 +146,13 @@ function ValidateUser(e, p, ut) {
         contentType: "application/json;charset=utf-8",
         url: "/api/User/ValidateUser",
         success: function (data) {
-            alert(data);
+           // alert(data);
+            if (data == "CULogged In") {
+                window.location.href = "/Company/CompanyDashboard";
+            }
+            else if (data == "ULogged In") {
+                window.location.href = "/Student/StudentDashboard";
+            }
         },
         error: function (a, b, c) {
             alert(a.responseText);
@@ -155,7 +163,7 @@ function ValidateUser(e, p, ut) {
 function forgotpwd()
 {
     var email = $('#txtresetpwd').val();
-    var match_email = /^((([a-zA-z]+(\.[a-zA-z0-9])?){1,250})(\d{0,30})?)\@((([a-zA-z]+){1,250}))\.(([a-zA-z]+){2,5})$/;
+    var match_email = /^((([a-zA-z]+(\.[a-zA-z0-9])?){1,250})(\d{0,30})?)\@((([a-zA-z]+){1,250}))\.(([a-zA-z.]+){2,5})$/;
     var result = match_email.test(email);
     if (result) {
         $.ajax({
@@ -177,6 +185,102 @@ function forgotpwd()
     }
 }
 
+function companyuserchangepwd(oldpwd, newpwd, type)
+{
+ 
+
+    $.ajax({
+        data: "{'oldPass':'" + oldpwd+"','newPass':'"+newpwd+ "','type':'"+type+"'}",
+        type: "POST",
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        url: "/api/User/Test",
+        success: function (data) {
+          
+            $("#cmpcoldpass").val('');
+            $("#cmpcnewpass").val('');
+            $("#cmpcnewcpass").val('');
+            alert(data);
+        },
+        error: function (a, b, c) {
+          
+            alert(a.responseText);
+        }
+    });
+}
+
+function Studentchangepwd(oldpwd, newpwd, type) {
+
+
+    $.ajax({
+        data: "{'oldPass':'" + oldpwd + "','newPass':'" + newpwd + "','type':'" + type + "'}",
+        type: "POST",
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        url: "/api/User/Test",
+        success: function (data) {
+
+            $("#stucoldpass").val('');
+            $("#stucnewpass").val('');
+            $("#stucnewcpass").val('');
+            alert(data);
+        },
+        error: function (a, b, c) {
+
+            alert(a.responseText);
+        }
+    });
+}
+
+
+function companyUpdateInformation(CompName, FirstName, LastName, Phone) {
+
+
+    $.ajax({
+        data: "{'CompName':'" + CompName + "','FirstName':'" + FirstName + "','LastName':'" + LastName + "','Phone':'" + Phone + "'}",
+        type: "POST",
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        url: "/api/User/UpdateCompanyInformation",
+        success: function (data) {
+
+            //$("#cmpcoldpass").val('');
+            //$("#cmpcnewpass").val('');
+            //$("#cmpcnewcpass").val('');
+            alert(data);
+        },
+        error: function (a, b, c) {
+
+            alert(a.responseText);
+        }
+    });
+}
+
+
+// to update student information
+
+function studentUpdateInformation(stuUserName, stuSchoolEmail, stuSchoolName, stuFirstName, stuLastName, stuGradDate) {
+
+   
+    $.ajax({
+        data: "{'UserName':'" + stuUserName + "','SchoolEmail':'" + stuSchoolEmail + "','School':'" + stuSchoolName + "','FirstName':'" + stuFirstName + "','LastName':'" + stuLastName + "','GraduationDate':'" + stuGradDate + "'}",
+        type: "POST",
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        url: "/api/User/UpdateStudentInformation",
+        success: function (data) {
+
+            //$("#cmpcoldpass").val('');
+            //$("#cmpcnewpass").val('');
+            //$("#cmpcnewcpass").val('');
+            alert(data);
+        },
+        error: function (a, b, c) {
+
+            alert(a.responseText);
+        }
+    });
+}
 
 
 //function ValidationForUserSignUp()

@@ -79,7 +79,7 @@ namespace FTAPWeb.Services
                     int? result = db.pCreateCompanyUser(company.CompanyName, company.FirstName, company.LastName, company.Email, company.Phone, company.Password).First();
                     if (result > 0)
                     {
-                        msg = "Thanks for registration.";
+                        msg = "Thanks for registration.Please Check your email to confirm registration.";
                         Utility.SendRegisterationEmail(int.Parse(result.ToString()), company.Email, company.FirstName, company.LastName);
                     }
                     else if (result == -2)

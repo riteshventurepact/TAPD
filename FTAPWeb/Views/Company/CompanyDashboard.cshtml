@@ -5,4 +5,25 @@
     Layout = "~/Views/Shared/_CompanysLayout.cshtml";
 }
 
-<h2>CompanyDashboard</h2>
+    <div id="middle">
+            <div>@ViewBag.UserDetails.FirstName</div>
+            <div class="clear"></div>
+            <div class="dashboard_cont">
+                <div class="dashboard_box">
+                    @Html.ActionLink("COMPANY INFORMATION", "CompanyInformation")
+                	@*<a href="javascript:void(0);">COMPANY INFORMATION</a>*@
+                </div>
+                <div class="dashboard_box">
+                	@Html.ActionLink("PERSONALIZATION", "CompanyPersonalisation")
+                </div>
+                <div class="dashboard_box">
+                	<a href="javascript:void(0);">Your Events</a>
+                </div>
+                <div class="dashboard_box">
+                    @Html.ActionLink("ACCOUNT SETTINGS", "CompanyAccountSetting")
+                	@*<a href="javascript:void(0);">Account Settings</a>*@
+                </div>
+      		</div>
+      </div>
+
+

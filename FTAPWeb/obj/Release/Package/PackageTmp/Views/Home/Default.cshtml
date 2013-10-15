@@ -6,24 +6,26 @@
 }
 <!--start of Interests-->
 <div class="interest_outr">
+    
     <div class="interest_heading">
         <p>Interests</p>
-        @Html.ActionLink("See all", "Interest", "Home")
+        @Html.ActionLink("See all", "Interests", "Home")
     </div>
+    @*<img src="~/Images/processing.gif"/>*@
     <ul id="flexiselDemo3">
-
         @{
-        if(ViewBag.Interests!=null)
-        {
-        foreach (var interest in ViewBag.Interests)
-        {
-            <li>
-                <img src="@Url.Content(interest.InterestPicture)" /><p>@interest.InterestName</p>
-            </li>      
-        }
-        }
+            if(ViewBag.Interests!=null)
+            {
+                foreach (var interest in ViewBag.Interests)
+                {
+                    <li>
+                        <img src="@Url.Content(interest.InterestPicture)" /><p>@interest.InterestName</p>
+                    </li>      
+                }
+            }
         }
     </ul>
+
 </div>
 <!--End of interests-->
 

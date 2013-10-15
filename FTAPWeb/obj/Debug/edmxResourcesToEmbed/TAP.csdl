@@ -71,6 +71,7 @@
     <Property Type="String" Name="ThirdAdminEmail" MaxLength="250" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="ThirdAdminRole" MaxLength="150" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Interest" Relationship="TAPDModel.FK_Companies_Interests" FromRole="Company" ToRole="Interest" />
+    <Property Type="String" Name="CompanySize" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="JobType">
     <Key>
@@ -129,6 +130,7 @@
     <Property Name="Year" Type="Int32" />
     <Property Name="Language" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Type="String" Name="School" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="UserRoll">
     <Key>

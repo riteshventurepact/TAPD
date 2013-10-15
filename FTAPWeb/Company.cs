@@ -30,6 +30,7 @@ namespace FTAPWeb
         public string SecondaryAdminRole { get; set; }
         public string ThirdAdminEmail { get; set; }
         public string ThirdAdminRole { get; set; }
+        public string CompanySize { get; set; }
     
         public virtual Location Location { get; set; }
         public virtual Interest Interest { get; set; }

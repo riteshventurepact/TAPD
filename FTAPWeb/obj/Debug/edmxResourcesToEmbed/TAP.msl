@@ -16,6 +16,7 @@
     <EntitySetMapping Name="Companies">
       <EntityTypeMapping TypeName="TAPDModel.Company">
         <MappingFragment StoreEntitySet="Companies">
+          <ScalarProperty Name="CompanySize" ColumnName="CompanySize" />
           <ScalarProperty Name="ThirdAdminRole" ColumnName="ThirdAdminRole" />
           <ScalarProperty Name="ThirdAdminEmail" ColumnName="ThirdAdminEmail" />
           <ScalarProperty Name="SecondaryAdminRole" ColumnName="SecondaryAdminRole" />
@@ -86,6 +87,7 @@
     <EntitySetMapping Name="Students">
       <EntityTypeMapping TypeName="TAPDModel.Student">
         <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="School" ColumnName="School" />
           <ScalarProperty Name="StudentDetailId" ColumnName="StudentDetailId" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />

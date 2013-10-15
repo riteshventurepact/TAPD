@@ -1,0 +1,34 @@
+﻿@model FTAPWeb.Company
+
+@{
+    ViewBag.Title = "CompanyAccountSetting";
+    Layout = "~/Views/Shared/_CompanysLayout.cshtml";
+}
+<div id="middle">
+        	
+            <div class="clear"></div>
+            
+
+    <div class="compnay_info_inner">
+                <form class="company_info_form" id="companychangepassword" name="companychangepassword">
+                    <div class="company_form_inner">
+                        <label>Password</label>
+                        <div class="account_setting_right"> 
+                        	<input type="password" placeholder="Current Password" id="cmpcoldpass" name="cmpcoldpass"/>
+                        	<input type="password" placeholder="New Password" id="cmpcnewpass" name="cmpcnewpass"/>
+                        	<input type="password" placeholder="Re-type Password" id="cmpcnewcpass" name="cmpcnewcpass"/>
+                        </div>
+                    </div>
+                    <div class="company_form_inner">
+                    	<label></label>
+                        <input type="button" class="button" value="SAVE" id="compPassChange" name="compPassChange"/>
+                        
+                    </div>
+                    <div class="account_setting_inner">
+                        <a href="javascript:void(0);">Delete Account</a>
+                    </div>
+                </form>
+      		</div>
+
+      </div>
+

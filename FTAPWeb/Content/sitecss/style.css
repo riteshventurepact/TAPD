@@ -68,8 +68,7 @@ h4 {
 #header_content {
     margin: 0 auto;
     max-width: 940px;
-    /*padding-top:10px;*/
-	padding-top:6px;
+	padding-top:10px;
 	position:relative;
 }
 #header{
@@ -112,12 +111,12 @@ h4 {
 }
 .head_right{
 	float: right;
-    width: 15%;
+    width: 24%;
 	margin-top:13px;
 }
 .joinus{
 	line-height:37px;
-	max-width: 135px;
+	/*max-width: 135px; 1oct*/
 	margin:0px;
 }
 .joinus a {
@@ -129,6 +128,7 @@ h4 {
     height: 37px;
     text-align: center;
     text-decoration: none;
+	text-transform:uppercase;
     width: 90px;
 }
 .joinus a:hover{
@@ -527,7 +527,7 @@ h4 {
   text-decoration: none;
   color:#3e3e3e;
   font-size: 18px;
-  padding: 15px 68px 18px 30px;
+  padding: 15px 48px 18px 30px;
 
 }
 .tabs li:last-child a {
@@ -576,7 +576,7 @@ h4 {
   text-decoration: none;
   color:#3e3e3e;
   font-size: 18px;
-  padding: 15px 69px 18px 30px;
+  padding: 15px 48px 18px 30px;
 
 }
 .tabs1 li:last-child a {
@@ -729,29 +729,7 @@ table {
 	color:#333;
 	text-decoration:none;
 	}
-.signup_fb{
-	float:left;
-	width: 353px;
-	margin-left: 18px;
-	height:50px;
-	display:block;
-	background:url(../images/fb_btn.png) #282727 center no-repeat;
-	margin-top:10px;
-	cursor:pointer;
-	-webkit-transition: all 0.5s linear;
-	-moz-transition: all 0.5s linear;
-	transition: all 0.5s linear;
-}
-.signup_fb a{
-	width:345px;
-	height:50px;
-}
-.signup_fb:hover{
-	background:url(../images/fb_btn.png) #666 center no-repeat;
-	-webkit-transition: all 0.5s linear;
-	-moz-transition: all 0.5s linear;
-	transition: all 0.5s linear;
-}
+
 .popupfied{
 	margin-left: 23px;
     padding: 0;
@@ -764,7 +742,7 @@ table {
 .interest_outr
 {
 	float:left;
-	width:100%;
+	width:99%;
 	margin-bottom:35px;
 }
 .interest_heading
@@ -1047,21 +1025,25 @@ display:none;
 #search_boxoutr
 {
 	background-color: rgba(255, 255, 255, 0.7);
-    float: left;
-    height: 440px;
-    width: 940px;
+    width: 100%;
     z-index: 9999;
+	position:absolute;
+	top:0;
+	bottom:0;
+	height:980px;
 	display:none;
 }
 #search_boxoutr input
 {
-	float:left;
-	width:97%;
-	padding:10px;
-	font-size:100px;
-	font-family:Arial, Helvetica, sans-serif;
-	background:none;
-	border:none;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 170px;
+    margin-bottom: 38px;
+    margin-top: 100px;
+    padding: 10px;
+    width: 97%;
 }
 #dashboard_outr
 {
@@ -1145,7 +1127,7 @@ display:none;
     float: left;
     min-height: 350px;
     padding: 24px;
-    width: 95%;
+    width: 92%;
 }
 .interest_list
 {
@@ -1194,18 +1176,428 @@ display:none;
     width: 100%;
 	margin:0px;
 }
+
+/*Interest end {SAhil}*/
+/*Changes 1oct start*/
+.popbox:hover
+{
+	background:#DCF7F2;
+}
+.company_outr
+{
+	background: none repeat scroll 0 0 #F6F6F6;
+    float: left;
+    margin-top: 4px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 100%;
+}
+.compnay_info_inner
+{
+	margin: 0 auto;
+	width:940px;
+}
+.company_info_title {
+	float: left;
+    width: 400px;
+	margin-left: 20px;
+	position:relative;
+}
+.company_info_title .img_arrow_back{
+	float: left;
+}
+.company_info_title h1 {
+    float: left;
+    padding-left: 30px;
+    padding-top: 3px;
+}
+.company_info_title .down_arrow_company {
+    float: left;
+    margin-left: 10px;
+    margin-top: 18px;
+}
+.company_cancel {
+    float: right;
+    margin-right: 20px;
+}
+.company_info_form
+{
+	margin: 0 auto;
+	padding-top:55px;
+    width: 80%;
+}
+.company_form_inner
+{
+	float:left;
+	width:100%;
+	position:relative;
+}
+.company_form_inner label
+{
+    float: left;
+    font-size: 13px;
+    width: 30%;
+	text-transform:uppercase;
+	padding-top: 15px;
+}
+.company_form_inner input 
+{
+    background: none repeat scroll 0 0 #DCF7F2;
+    border: medium none;
+    color: #3E3E3E;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    height: 50px;
+    margin-bottom: 10px;
+    outline: medium none;
+    padding-left: 20px;
+    width: 67%;
+	float: left;
+}
+.company_form_inner select 
+{
+    background: none repeat scroll 0 0 #DCF7F2;
+    border: medium none;
+    color: #3E3E3E;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    height: 50px;
+    margin-bottom: 10px;
+    outline: medium none;
+    padding: 15px;
+    width: 69.7%;
+}
+.company_form_inner select option
+{
+	color:#3e3e3e3;
+}
+
+.company_form_inner input.button
+{
+    background: none repeat scroll 0 0 #F95F66;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+	margin-top:55px;
+    float: right;
+    font-size: 18px;
+    height: 50px;
+    text-align: center;
+    transition: all 0.5s linear 0s;
+    width: 70%;
+}
+.company_form_inner .button:hover 
+{
+    background: none repeat scroll 0 0 #F53C41;
+    transition: all 0.5s linear 0s;
+}
+.company_form_inner .file_upload {
+    background: url("../images/upload_company_logo.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 139px;
+    overflow: hidden;
+    padding-left: 138px;
+    width: 0;
+}
+.company_form_inner p {
+    float: right;
+    font-size: 12px;
+    margin: 0;
+    padding-bottom: 50px;
+    width: 70%;
+}
+.company_form_inner span {
+    float: left;
+    margin-bottom: 10px;
+}
+input[type="checkbox"], input[type="radio"] {
+    padding: 0;
+}
+.regular-checkbox + label {
+    background-color: #DCF7F2;
+    display: inline-block;
+    margin-top: 3px;
+    padding: 14px;
+    position: relative;
+    width: 0;
+}
+.regular-checkbox {
+    display: none;
+}
+.regular-checkbox:checked + label:after {
+    color: #3E3E3E;
+    content: "✔";
+    font-size: 14px;
+    left: 8px;
+    position: absolute;
+    top: 5px;
+}
+.regular-checkbox:checked + label {
+    background-color: #DCF7F2;
+    color: #3E3E3E;
+}
+.company_form_inner .checkbox_main{
+	float: left;
+    width: 70%;
+	margin: 15px 0;
+}
+.company_form_inner div.checkbox_outr {
+    float: left;
+    width: 50%;
+	margin-bottom: 15px;
+}
+.company_form_inner .checkbox_outr .employees label {
+    float: left;
+	padding-left: 10px;
+	padding-top: 0px;
+    width: 120px;
+}
+.company_add {
+    float: left;
+    width: 70%;
+}
+.personalization_inner{
+	float: right;
+	width: 70%;
+	margin: 20px 0px;
+}
+.personalization_inner_list {
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 25px;
+    width: 106px;
+}
+.personalization_inner_list a img{
+    border: 8px solid #DCF7F2;
+    cursor: pointer;
+    max-height: 120px;
+    max-width: 124px;
+    position: relative;
+    width: 100%;
+}
+.personalization_inner_list h4 {
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: normal;
+    margin-top: 10px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.personalization_inner_list a img:hover {
+    background: #DCF7F2;
+}
+.personalization_inner_list a img.active {
+    background: #DCF7F2!important;
+}
+.profile_pic_info {
+    background: none repeat scroll 0 0 #000000;
+    float: left;
+    left: 225px;
+    opacity: 0.7;
+    position: absolute;
+	display:none;
+}
+.profile_pic_info ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+	width: 138px;
+	float:left;
+}
+.profile_pic_info ul li{
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.profile_pic_info ul li a{
+	color: #FFFFFF !important;
+    font-size: 12px;
+    text-decoration: none !important;
+	line-height: 35px;
+}
+.skills_edit_main {
+    float: left;
+    width: 100%;
+	margin-bottom: 20px;
+}
+.skills_edit_inner {
+    float: left;
+    margin-right: 10px;
+    width: 26%;
+}
+.skills_edit_main .skills_edit_inner label {
+    background: none repeat scroll 0 0 #DCF7F2;
+    float: left;
+    font-size: 12px;
+	padding: 10px;
+    width: 56%;
+}
+.skills_edit_main .skills_edit_inner span.list_cancel {
+    float: left;
+    margin-left: 1px;
+}
+.about_us_link
+{
+	float:left;
+	width:auto;
+	padding:10px;
+	color:#ccc;
+	text-transform:uppercase;
+	font-family: Conv_FRABK;
+	text-decoration:none;
+}
+.about_us_link:hover
+{
+	text-decoration:underline;
+}
+
+
+/*Changes 1oct end*/
+/*changes 5oct start */
+.user_drop_down
+{
+	background: #F6F6F6;
+    float: left;
+    left: 54px;
+    margin: 0;
+    padding: 10px 0 0;
+    position: absolute;
+    top: 40px;
+    width: 250px;
+	display:none;
+    z-index: 9;
+}
+.user_drop_down li
+{
+	float:left;
+	width:79%;
+	padding:10px 26px;
+}
+.user_drop_down li a
+{
+	float:left;
+	width:100%;
+	color:#333;
+	text-decoration:none;
+}
+.user_drop_down li:hover
+{
+	background:#ccc;
+}
+/*Account setting page start 5oct*/
+.account_setting_inner
+{
+	float: left;
+    position: relative;
+    width: 100%;
+}
+.account_setting_inner a
+{
+	float: left;
+    font-size: 13px;
+    padding-top: 15px;
+    text-transform: uppercase;
+    width: 30%;
+	color:#666;
+	margin-top:40px;
+}
+.account_setting_right
+{
+	float:left;
+	width:70%;
+}
+.account_setting_right input
+{
+	background: none repeat scroll 0 0 #DCF7F2;
+    border: medium none;
+    color: #3E3E3E;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    height: 50px;
+    margin-bottom: 10px;
+    outline: medium none;
+    padding-left: 20px;
+    width: 96%;
+	float: left;
+}
+
+/*Account setting page end 5oct*/
+/*Dashboard page start 5oct*/
+.dashboard_cont
+{
+	margin: 0 auto;
+    width: 940px;
+	margin-top:50px;
+}
+.dashboard_box
+{
+	border: 8px solid #DCF7F2;
+    float: left;
+    margin-left: 18px;
+    width: 21%;
+	text-align:center;
+}
+.dashboard_box a
+{
+	color:#666;
+	text-decoration:none;
+	padding:75px 20px;
+	display:block;
+	min-height:40px;
+	text-transform:uppercase;
+}
+.dashboard_box a:hover
+{
+	background:#DCF7F2;
+}
+.form ul li
+{
+    position:relative;
+}
+.error_outr 
+{
+    float: left;
+    left: 24px;
+    position: absolute;
+    top: -23px;
+    width: 250px;
+    padding-bottom:15px;
+    background-image:url("../images/arrow_small.png") ;
+    background-repeat:no-repeat;
+    background-position:4px 28px;
+}
 .error
 {
-    background-color:pink!important;
-    border:solid 1px red!important;
+    background-color: #F95F66;
+    border: 2px solid #DDDDDD;
+
+    -moz-border-radius:5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius:5px 5px 5px 5px;
+
+    -moz-box-shadow: 0 0 6px #000000;
+    box-shadow: 0 0 6px #000000;
+    -webkit-box-shadow: 0 0 6px #000000;
+
+    color: #FFFFFF;
+    font-size: 12px;
+    min-width: 120px;
+    padding: 4px 10px;
+    width: 100%;
+}
+.error_outr .valid
+{
+    display:none !important;
 }
 
 
 
 
 
+/*Dashboard page end 5oct*/
 
 
 
-
-/*Interest end {SAhil}*/

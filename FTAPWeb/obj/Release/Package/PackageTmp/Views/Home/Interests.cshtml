@@ -1,0 +1,42 @@
+﻿@model FTAPWeb.Interest
+
+@{
+    ViewBag.Title = "TAPD";
+    Layout = "~/Views/Shared/_TAPDLayoutPage.cshtml";
+}
+
+<!--start of Interests-->
+<div class="interest_outr">
+    <div class="interest_heading_main">
+        <p>Interests</p>
+    </div>
+    <div class="interest_inner">
+        <div class="interest_list">
+            @{
+                if (ViewBag.Interests != null)
+                {
+                    foreach (var interest in ViewBag.Interests)
+                    {
+                <div class="interest_list_inner">
+                    <a href="javascript:void(0);">
+                        @if (interest.InterestPicture != null)
+                        {
+                            <img src='@Url.Content(interest.InterestPicture)' />
+                        }
+                        else
+                        {
+                            <img src='~/images/no-image.jpg' />   
+                        }
+                    </a>
+                    <a style="color:#666666" href="javascript:void(0)">
+                        <h4><b>@interest.InterestName</b></h4>
+                        <p>20 Opportunities</p>
+                    </a>
+                </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>
+

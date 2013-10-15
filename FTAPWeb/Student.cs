@@ -22,5 +22,6 @@ namespace FTAPWeb
         public Nullable<int> Year { get; set; }
         public string Language { get; set; }
         public Nullable<System.DateTime> UpdatedOn { get; set; }
+        public string School { get; set; }
     }
 }

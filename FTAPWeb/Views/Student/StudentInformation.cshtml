@@ -1,0 +1,61 @@
+﻿@model FTAPWeb.User
+
+@{
+    ViewBag.Title = "StudentInformation";
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+
+<div id="middle">
+        	
+            <div class="clear"></div>
+    <div class="compnay_info_inner">
+                <form class="company_info_form" id="stuInfoForm" name="stuInfoForm">
+                	
+                    <div class="company_form_inner">
+                        <label>FIRST NAME</label>
+                        <input type="text" placeholder="Type First Name Here..." value="@ViewBag.UserDetails.FirstName" id="StuEditInfoFirstName"/>
+                    </div>
+                    <div class="company_form_inner">
+                        <label>LAST NAME</label>
+                        <input type="text" placeholder="Type First Name Here..." value="@ViewBag.UserDetails.LastName" id="StuEditInfoLasttName"/>
+                    </div>
+                    <div class="company_form_inner">
+                        <label>USERNAME</label>
+                        <input type="text" placeholder="Type User Name Here..." value="@ViewBag.UserDetails.EmailId" readonly="true" id="StuEditInfoUserName"/>
+                    </div>
+                    <div class="company_form_inner">
+                        <label>SCHOOL EMAIL</label>
+                        <input type="text" placeholder="Type School Email Here..." value="@ViewBag.UserDetails.EmailId" readonly="true" id="StuEditInfoEmail"/>
+                    </div>
+                    <div class="company_form_inner">
+                        <label>SCHOOL</label>
+                        <input type="text" placeholder="Type School Here..." value="@ViewBag.StudentDetails.School" id="StuEditInfoSchool"/>
+                    </div>
+                    <div class="company_form_inner">
+                       <label>GRADUATION DATE</label>
+                        <select id="gradYearOption">
+                        	
+                            <option>- Please Select -</option>
+                            @{
+                                if (@ViewBag.StudentDetails.Year != null)
+                                {
+                                     <option selected>@ViewBag.StudentDetails.Year</option>
+                                }
+                            }
+                            
+
+                            <option>2010</option>
+                            <option>2011</option>
+                            <option>2012</option>
+                            <option>2013</option>
+                        </select>
+                    </div>
+                    <div class="company_form_inner">
+                    	<label></label>
+                        
+                        <input type="button" class="button" value="CONTINUE" id="stuInfoContinue" name="stuInfoContinue"/>
+                    </div>
+                </form>
+      		</div>
+
+    </div>

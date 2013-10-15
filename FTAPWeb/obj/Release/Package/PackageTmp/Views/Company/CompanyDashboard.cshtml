@@ -1,0 +1,29 @@
+﻿@model FTAPWeb.Company
+
+@{
+    ViewBag.Title = "CompanyDashboard";
+    Layout = "~/Views/Shared/_CompanysLayout.cshtml";
+}
+
+    <div id="middle">
+            <div>@ViewBag.UserDetails.FirstName</div>
+            <div class="clear"></div>
+            <div class="dashboard_cont">
+                <div class="dashboard_box">
+                    @Html.ActionLink("COMPANY INFORMATION", "CompanyInformation")
+                	@*<a href="javascript:void(0);">COMPANY INFORMATION</a>*@
+                </div>
+                <div class="dashboard_box">
+                	<a href="javascript:void(0);">Personalization</a>
+                </div>
+                <div class="dashboard_box">
+                	<a href="javascript:void(0);">Your Events</a>
+                </div>
+                <div class="dashboard_box">
+                    @Html.ActionLink("ACCOUNT SETTINGS", "CompanyAccountSetting")
+                	@*<a href="javascript:void(0);">Account Settings</a>*@
+                </div>
+      		</div>
+      </div>
+
+

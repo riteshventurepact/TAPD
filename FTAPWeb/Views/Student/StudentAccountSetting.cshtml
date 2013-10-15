@@ -1,0 +1,34 @@
+﻿@model FTAPWeb.User
+
+@{
+    ViewBag.Title = "StudentAccountSetting";
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+
+<div id="middle">
+        	
+            <div class="clear"></div>
+            
+
+    <div class="compnay_info_inner">
+                <form class="company_info_form" id="studentchangepassword" name="studentchangepassword">
+                    <div class="company_form_inner">
+                        <label>Password</label>
+                        <div class="account_setting_right"> 
+                        	<input type="password" placeholder="Current Password" id="stucoldpass" name="stucoldpass"/>
+                        	<input type="password" placeholder="New Password" id="stucnewpass" name="stucnewpass"/>
+                        	<input type="password" placeholder="Re-type Password" id="stucnewcpass" name="stucnewcpass"/>
+                        </div>
+                    </div>
+                    <div class="company_form_inner">
+                    	<label></label>
+                        <input type="button" class="button" value="SAVE" id="stuPassChange" name="stuPassChange"/>
+                        
+                    </div>
+                    <div class="account_setting_inner">
+                        <a href="javascript:void(0);">Delete Account</a>
+                    </div>
+                </form>
+      		</div>
+
+      </div>

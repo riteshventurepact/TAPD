@@ -1,0 +1,97 @@
+﻿@model FTAPWeb.User
+
+@{
+    ViewBag.Title = "StudentPersonalisation";
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+
+<div id="middle">
+        	@*<section class="company_outr">
+            	<div class="compnay_info_inner">
+               		<div class="company_info_title">
+                    	<span class="img_arrow_back">
+                        	<a href="javascript:void(0)"><img src="images/arrow_back.png" /></a>
+                        </span>
+                    	<h1>Personalization</h1>
+                        <span class="down_arrow_company"><img src="images/down_arrow_company.png" /></span>
+                    </div>
+                    <div class="company_cancel">
+                    	<a href="javascript:void(0)"><img src="images/icon_cancel.png" /></a>
+                    </div>
+                </div>
+            </section>*@
+            <div class="clear"></div>
+            <div class="compnay_info_inner">
+                <form class="company_info_form">
+                    <div class="company_form_inner">
+                        <label>PROFILE PICTURE</label>
+                        <input type="" name="file_upload" class="file_upload">
+                        <div class="profile_pic_info">
+                            <ul>
+                            	<li><a href="javascript:void(0)"> Take Photo...</a></li>
+                                <li><a href="javascript:void(0)">Upload New...</a></li>
+                                <li><a href="javascript:void(0)">Choose Photo...</a></li>
+                                <li><a href="javascript:void(0)">Delete...</a></li>
+                            </ul>
+                        </div>
+                        <p>You can upload a JPG, GIF or PNG file (File size limit is 4 MB).</p>
+                    </div>
+                    <div class="company_form_inner">
+                        <label>I'M PASSIONATE ABOUT...</label>
+                        <label>Please select all that apply</label>
+                        <div class="personalization_inner">
+                              @foreach (var item in ViewBag.InterestList)
+                    {
+                        <div class="personalization_inner_list">
+                            <a href="javascript:void(0);">
+                                <img class="active" src="@item.InterestPicture"/></a>
+                            <h4>@item.InterestName</h4>
+                        </div>
+                    }
+                    	</div>
+                    </div>
+                    <div class="company_form_inner">
+                        <label>MY SKILLS ARE...</label>
+                        <div class="company_add">
+                            <input type="text" placeholder="Add skills & expertise"/>
+                            <span><a href="javascript:void(0)"><img src="images/company_add.jpg" /></a></span>
+                            <div class="skills_edit_main">
+                            	<div class="skills_edit_inner">
+                            		<label>Consulting</label>
+                                    <span class="list_cancel"><a href="javascript:void(0)"><img src="~/Content/images/list_cancel.png" /></a></span>
+                                </div>
+                                <div class="skills_edit_inner">
+                            		<label>Research</label>
+                                    <span class="list_cancel"><a href="javascript:void(0)"><img src="~/Content/images/list_cancel.png" /></a></span>
+                                </div>
+                                <div class="skills_edit_inner">
+                            		<label>Strategy </label>
+                                    <span class="list_cancel"><a href="javascript:void(0)"><img src="~/Content/images/list_cancel.png" /></a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="company_form_inner">
+                        <label>LOOKING FOR CAREERS IN OR NEAR...</label>
+                        <div class="company_add">
+                            <input type="text" placeholder="Add one or more locations"/>
+                            <span><a href="javascript:void(0)"><img src="~/Content/images/company_add.jpg" /></a></span>
+                            <div class="skills_edit_main">
+                            	<div class="skills_edit_inner">
+                            		<label>New York, NY </label>
+                                    <span class="list_cancel"><a href="javascript:void(0)"><img src="~/Content/images/list_cancel.png" /></a></span>
+                                </div>
+                                <div class="skills_edit_inner">
+                            		<label>Palo Alto, CA </label>
+                                    <span class="list_cancel"><a href="javascript:void(0)"><img src="~/Content/images/list_cancel.png" /></a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="company_form_inner">
+                    	<label></label>
+                        <input type="submit" class="button" value="DONE"/>
+                    </div>
+                </form>
+      		</div>
+      </div>

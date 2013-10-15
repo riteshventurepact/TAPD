@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="52692aa5e67947a998b7a3ba96dc7b62" Name="Diagram1">
         <EntityTypeShape EntityType="TAPDModel.CollaborationImage" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TAPDModel.Company" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAPDModel.Company" Width="1.5" PointX="4.25" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="TAPDModel.JobType" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TAPDModel.Location" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TAPDModel.Opportunity" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />

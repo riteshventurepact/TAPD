@@ -65,7 +65,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2013 10:36:34</publishTime>
     </File>
     <File Include="bin/FTAPWeb.dll">
-      <publishTime>09/30/2013 17:08:47</publishTime>
+      <publishTime>10/08/2013 13:28:27</publishTime>
     </File>
     <File Include="bin/it/Microsoft.Data.Edm.resources.dll">
       <publishTime>09/27/2013 10:36:34</publishTime>
@@ -188,403 +188,439 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2013 10:36:34</publishTime>
     </File>
     <File Include="Content/fonts/FRABK.eot">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/fonts/FRABK.otf">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/fonts/FRABK.svg">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/fonts/FRABK.ttf">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/fonts/FRABK.woff">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/fonts/GothamMedium.eot">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/fonts/GothamMedium.otf">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/fonts/GothamMedium.svg">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/fonts/GothamMedium.ttf">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/fonts/GothamMedium.woff">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/fonts/VAGRounded-Light.eot">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/fonts/VAGRounded-Light.otf">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/fonts/VAGRounded-Light.svg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/fonts/VAGRounded-Light.ttf">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/fonts/VAGRounded-Light.woff">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/images/arrows.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
+    </File>
+    <File Include="Content/images/arrow_back.png">
+      <publishTime>10/04/2013 13:38:42</publishTime>
+    </File>
+    <File Include="Content/images/arrow_small.png">
+      <publishTime>10/05/2013 15:47:34</publishTime>
     </File>
     <File Include="Content/images/blank.gif">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/bullets.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/carousel1.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/carousel10.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/carousel2.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/carousel3.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/carousel4.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/carousel5.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/carousel6.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/carousel7.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/carousel8.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/carousel9.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
+    </File>
+    <File Include="Content/images/cheackbox_bg.jpg">
+      <publishTime>10/04/2013 13:38:42</publishTime>
+    </File>
+    <File Include="Content/images/check_radio_sheet.png">
+      <publishTime>10/04/2013 13:38:42</publishTime>
+    </File>
+    <File Include="Content/images/comp1.jpg">
+      <publishTime>10/04/2013 13:38:36</publishTime>
+    </File>
+    <File Include="Content/images/comp2.jpg">
+      <publishTime>10/04/2013 13:38:36</publishTime>
+    </File>
+    <File Include="Content/images/comp3.jpg">
+      <publishTime>10/04/2013 13:38:36</publishTime>
     </File>
     <File Include="Content/images/CompanyPictures/Coca-Cola.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
+    </File>
+    <File Include="Content/images/company_add.jpg">
+      <publishTime>10/04/2013 13:38:36</publishTime>
     </File>
     <File Include="Content/images/downarrow.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/down_arrow.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
+    </File>
+    <File Include="Content/images/down_arrow_company.png">
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/fancybox_loading.gif">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/fancybox_overlay.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/fancybox_sprite.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/fb_btn.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
+    </File>
+    <File Include="Content/images/icon_cancel.png">
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/img1.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/img2.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/img3.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/img4.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/img5.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/img_book.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/interest1.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/interest2.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/interest3.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/Interests/carousel1.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/images/Interests/carousel10.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/images/Interests/carousel2.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/images/Interests/carousel3.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/images/Interests/carousel4.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/images/Interests/carousel5.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/images/Interests/carousel6.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/images/Interests/carousel7.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/images/Interests/carousel8.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/images/Interests/carousel9.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/images/joinus.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/left_arrow.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/left_arw.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/left_arw.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
+    </File>
+    <File Include="Content/images/list_cancel.png">
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/loading.gif">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/logo.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/logo_here.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/popup_video.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/right_arrow.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/search-icn.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/search-icn_active.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/slider1.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/slider2.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/slider3.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/themes.gif">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/uparrow.png">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
+    </File>
+    <File Include="Content/images/upload_company_logo.jpg">
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/images/video_img.jpg">
-      <publishTime>09/30/2013 12:47:53</publishTime>
+      <publishTime>10/04/2013 13:38:42</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/sitecss/css.css">
-      <publishTime>09/30/2013 15:10:36</publishTime>
+      <publishTime>09/30/2013 15:10:38</publishTime>
     </File>
     <File Include="Content/sitecss/jquery.fancybox.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/sitecss/responsive.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>10/05/2013 13:08:00</publishTime>
     </File>
     <File Include="Content/sitecss/responsiveslides.css">
-      <publishTime>09/30/2013 13:00:50</publishTime>
+      <publishTime>09/30/2013 13:00:52</publishTime>
     </File>
     <File Include="Content/sitecss/style.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>10/05/2013 16:16:26</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_222222_256x240.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_2e83ff_256x240.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_454545_256x240.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_888888_256x240.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_cd0a0a_256x240.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery-ui.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery.ui.accordion.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery.ui.all.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery.ui.autocomplete.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery.ui.base.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery.ui.button.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery.ui.core.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery.ui.datepicker.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery.ui.dialog.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery.ui.progressbar.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery.ui.resizable.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery.ui.selectable.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery.ui.slider.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery.ui.tabs.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/jquery.ui.theme.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/images/ui-bg_flat_75_ffffff_40x100.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/images/ui-icons_222222_256x240.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/images/ui-icons_2e83ff_256x240.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/images/ui-icons_454545_256x240.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/images/ui-icons_888888_256x240.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/images/ui-icons_cd0a0a_256x240.png">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/jquery-ui.min.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/jquery.ui.accordion.min.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/jquery.ui.autocomplete.min.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/jquery.ui.button.min.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/jquery.ui.core.min.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/jquery.ui.datepicker.min.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/jquery.ui.dialog.min.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/jquery.ui.progressbar.min.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/jquery.ui.resizable.min.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/jquery.ui.selectable.min.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/jquery.ui.slider.min.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/jquery.ui.tabs.min.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="Content/themes/base/minified/jquery.ui.theme.min.css">
-      <publishTime>09/30/2013 12:47:52</publishTime>
+      <publishTime>09/30/2013 12:47:54</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>09/27/2013 10:36:34</publishTime>
     </File>
     <File Include="fb.html">
-      <publishTime>09/30/2013 12:03:48</publishTime>
+      <publishTime>09/30/2013 12:03:50</publishTime>
     </File>
     <File Include="fonts/FRABK.eot">
       <publishTime>09/12/2013 07:45:44</publishTime>
@@ -644,10 +680,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2013 10:36:34</publishTime>
     </File>
     <File Include="Images/no-image.jpg">
-      <publishTime>09/30/2013 12:19:35</publishTime>
+      <publishTime>09/30/2013 12:19:36</publishTime>
     </File>
     <File Include="Images/no-logo.jpg">
-      <publishTime>09/30/2013 12:18:42</publishTime>
+      <publishTime>09/30/2013 12:18:44</publishTime>
     </File>
     <File Include="Images/orderedList0.png">
       <publishTime>09/27/2013 10:36:34</publishTime>
@@ -679,14 +715,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Images/orderedList9.png">
       <publishTime>09/27/2013 10:36:34</publishTime>
     </File>
+    <File Include="Images/processing.gif">
+      <publishTime>10/05/2013 10:41:34</publishTime>
+    </File>
     <File Include="packages.config">
       <publishTime>09/29/2013 22:15:02</publishTime>
+    </File>
+    <File Include="Scripts/additional-methods.js">
+      <publishTime>10/06/2013 22:55:28</publishTime>
     </File>
     <File Include="Scripts/blockUI.js">
       <publishTime>09/27/2013 11:46:54</publishTime>
     </File>
     <File Include="Scripts/FBLogin.js">
-      <publishTime>09/30/2013 17:02:44</publishTime>
+      <publishTime>10/08/2013 11:47:30</publishTime>
     </File>
     <File Include="Scripts/jquery-1.8.2.js">
       <publishTime>09/27/2013 10:36:34</publishTime>
@@ -740,7 +782,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2013 10:36:34</publishTime>
     </File>
     <File Include="Scripts/myvalidations.js">
-      <publishTime>09/30/2013 17:02:14</publishTime>
+      <publishTime>10/08/2013 11:28:00</publishTime>
     </File>
     <File Include="Scripts/responsiveslides.js">
       <publishTime>09/27/2013 10:36:34</publishTime>
@@ -758,7 +800,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2013 10:36:34</publishTime>
     </File>
     <File Include="TAP.edmx.diagram">
-      <publishTime>09/30/2013 16:04:46</publishTime>
+      <publishTime>09/30/2013 16:04:48</publishTime>
     </File>
     <File Include="TAP.tt">
       <publishTime>09/27/2013 10:36:34</publishTime>
@@ -790,8 +832,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Account/_SetPasswordPartial.cshtml">
       <publishTime>09/27/2013 10:36:34</publishTime>
     </File>
+    <File Include="Views/Company/CompanyAccountSetting.cshtml">
+      <publishTime>10/08/2013 10:35:53</publishTime>
+    </File>
+    <File Include="Views/Company/CompanyDashboard.cshtml">
+      <publishTime>10/08/2013 09:32:55</publishTime>
+    </File>
+    <File Include="Views/Company/CompanyInformation.cshtml">
+      <publishTime>10/07/2013 11:23:14</publishTime>
+    </File>
     <File Include="Views/Company/Create.cshtml">
-      <publishTime>09/27/2013 10:36:34</publishTime>
+      <publishTime>10/04/2013 15:06:26</publishTime>
     </File>
     <File Include="Views/Company/Delete.cshtml">
       <publishTime>09/27/2013 10:36:34</publishTime>
@@ -812,22 +863,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2013 10:36:34</publishTime>
     </File>
     <File Include="Views/Home/Companies.cshtml">
-      <publishTime>09/30/2013 12:22:57</publishTime>
+      <publishTime>10/01/2013 15:15:50</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
       <publishTime>09/27/2013 10:36:34</publishTime>
     </File>
     <File Include="Views/Home/Default.cshtml">
-      <publishTime>09/28/2013 22:58:10</publishTime>
+      <publishTime>10/05/2013 12:57:50</publishTime>
     </File>
     <File Include="Views/Home/ForgotPassword.cshtml">
-      <publishTime>09/30/2013 15:28:12</publishTime>
+      <publishTime>09/30/2013 15:28:14</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>09/27/2013 10:36:34</publishTime>
+      <publishTime>10/04/2013 16:56:22</publishTime>
     </File>
     <File Include="Views/Home/Interest.cshtml">
-      <publishTime>09/30/2013 12:23:31</publishTime>
+      <publishTime>10/01/2013 13:52:24</publishTime>
+    </File>
+    <File Include="Views/Home/Interests.cshtml">
+      <publishTime>10/01/2013 15:16:04</publishTime>
     </File>
     <File Include="Views/Interest/Create.cshtml">
       <publishTime>09/28/2013 09:43:44</publishTime>
@@ -843,6 +897,21 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Views/Interest/Index.cshtml">
       <publishTime>09/28/2013 09:44:32</publishTime>
+    </File>
+    <File Include="Views/Interests/Create.cshtml">
+      <publishTime>10/01/2013 13:49:48</publishTime>
+    </File>
+    <File Include="Views/Interests/Delete.cshtml">
+      <publishTime>10/01/2013 13:49:48</publishTime>
+    </File>
+    <File Include="Views/Interests/Details.cshtml">
+      <publishTime>10/01/2013 13:49:48</publishTime>
+    </File>
+    <File Include="Views/Interests/Edit.cshtml">
+      <publishTime>10/01/2013 13:49:48</publishTime>
+    </File>
+    <File Include="Views/Interests/Index.cshtml">
+      <publishTime>10/01/2013 13:49:46</publishTime>
     </File>
     <File Include="Views/Location/Create.cshtml">
       <publishTime>09/27/2013 10:36:34</publishTime>
@@ -862,6 +931,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>09/27/2013 10:36:34</publishTime>
     </File>
+    <File Include="Views/Shared/_CompanysLayout.cshtml">
+      <publishTime>10/07/2013 09:41:27</publishTime>
+    </File>
     <File Include="Views/Shared/_Layout.cshtml">
       <publishTime>09/27/2013 10:36:34</publishTime>
     </File>
@@ -869,7 +941,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2013 10:36:34</publishTime>
     </File>
     <File Include="Views/Shared/_TAPDLayoutPage.cshtml">
-      <publishTime>09/30/2013 17:07:53</publishTime>
+      <publishTime>10/06/2013 22:33:50</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>09/27/2013 10:36:34</publishTime>
@@ -878,7 +950,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2013 10:36:34</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/30/2013 17:08:50</publishTime>
+      <publishTime>10/08/2013 13:28:31</publishTime>
+    </File>
+    <File Include="_CompanysLayout.cshtml">
+      <publishTime>10/04/2013 15:20:00</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -205,6 +205,8 @@
     <Compile Include="Controllers\InterestsController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\MenuExtensions.cs" />
+    <Compile Include="Controllers\SessionHelper.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\Utility.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -279,6 +281,7 @@
   <ItemGroup>
     <Content Include="Content\images\arrows.png" />
     <Content Include="Content\images\arrow_back.png" />
+    <Content Include="Content\images\arrow_small.png" />
     <Content Include="Content\images\blank.gif" />
     <Content Include="Content\images\bullets.png" />
     <Content Include="Content\images\carousel1.png" />
@@ -441,6 +444,8 @@
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\no-image.jpg" />
     <Content Include="Images\no-logo.jpg" />
+    <Content Include="Images\processing.gif" />
+    <Content Include="Scripts\additional-methods.js" />
     <Content Include="Scripts\blockUI.js" />
     <Content Include="Scripts\FBLogin.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -543,9 +548,16 @@
     <Content Include="Views\Interests\Edit.cshtml" />
     <Content Include="Views\Interests\Delete.cshtml" />
     <Content Include="Views\Home\Interests.cshtml" />
-    <Content Include="_CompanysLayout.cshtml" />
     <Content Include="Views\Shared\_CompanysLayout.cshtml" />
     <Content Include="Views\Company\CompanyDashboard.cshtml" />
+    <Content Include="Views\Company\CompanyAccountSetting.cshtml" />
+    <Content Include="Views\Company\CompanyInformation.cshtml" />
+    <Content Include="Views\Shared\_StudentLayout.cshtml" />
+    <Content Include="Views\Student\StudentDashboard.cshtml" />
+    <Content Include="Views\Student\StudentAccountSetting.cshtml" />
+    <Content Include="Views\Student\StudentInformation.cshtml" />
+    <Content Include="Views\Company\CompanyPersonalisation.cshtml" />
+    <Content Include="Views\Student\StudentPersonalisation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
